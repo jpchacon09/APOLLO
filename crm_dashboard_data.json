@@ -1,0 +1,463 @@
+{
+  "timestamp": "2026-01-16T16:55:01.424679",
+  "kpis_principales": {
+    "Total Contactos": 938,
+    "Con Email": 938,
+    "Con Teléfono": 931,
+    "En Apollo": 165
+  },
+  "estados": {
+    "NO CONTESTA": 80,
+    "INTERESADO": 22,
+    "NO INTERESADO": 22,
+    "APAGADO": 22,
+    "AGENDADO": 17,
+    "NO PERFIL": 12,
+    "LINKEDIN": 9,
+    "REPROGRAMADO": 2,
+    "CORREO": 1,
+    "CERRADO": 1
+  },
+  "responsables": {
+    "": 930,
+    "Valentina": 6,
+    "Nicolas": 2
+  },
+  "steps": {
+    "SIN GESTION": 756,
+    "CLIENTES PLATAM": 120,
+    "LLAMADA 1 (DIA 3)": 59,
+    "LLAMADA 2 (DIA 6)": 1,
+    "AGENDADO": 1,
+    "LINKEDIN (DIA 4)": 1
+  },
+  "campanas": {
+    "Pilot – Día 5 – Texto plano": 39,
+    "Pilot – Día 4 – Texto plano": 30,
+    "Pilot – Día 8– Texto plano": 30,
+    "Pilot – Día 2 – Texto plano": 25
+  },
+  "fuentes": {
+    "EMIS": 780,
+    "CLIENTES PLATAM PAY": 120,
+    "Lusha": 35,
+    "Feria Salud y Belleza": 2,
+    "Corabastos": 1
+  },
+  "metricas_conversion": {
+    "Tasa de Interés/Agendados": 20.63,
+    "Tasa de No Contacto": 53.97,
+    "Tasa de Rechazo": 11.64,
+    "Tasa LinkedIn": 4.76
+  },
+  "contactos_por_estado": {
+    "": {
+      "cantidad": 749,
+      "top_5": [
+        {
+          "nombre": "",
+          "empresa": "Compañia Dsierra S.A.S.",
+          "email": "jarenas@dsierra.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "26/12/25"
+        },
+        {
+          "nombre": "",
+          "empresa": "CARVAL",
+          "email": "freddy.martinez@carval.com.co",
+          "responsable": "Valentina",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "26/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Productos Ramo S.A.",
+          "email": "carola.mora@ramo.com.co",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "7/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"",
+          "email": "grupodiazsas@gmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        },
+        {
+          "nombre": "Urrea Garcia Andres Fernando",
+          "empresa": "Inversiones Osmio S.A.S",
+          "email": "inversionesosmiosas@gmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "09/01/2026"
+        }
+      ]
+    },
+    "NO CONTESTA": {
+      "cantidad": 80,
+      "top_5": [
+        {
+          "nombre": "Jackeline Ortega",
+          "empresa": "Megapets",
+          "email": "megaofertasec@gmail.com",
+          "responsable": "Nicolas",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": ""
+        },
+        {
+          "nombre": "",
+          "empresa": "Fábrica de Licores y Alcoholes de Antioquia -EICE-",
+          "email": "diana.diaz@fla.com.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "26/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Pintuco",
+          "email": "ricardo.aguirre@pintuco.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": ""
+        },
+        {
+          "nombre": "",
+          "empresa": "Alimentos Polar",
+          "email": "laurindo.fernandez@empresas-polar.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "5/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Gelco International",
+          "email": "manuela.pinilla@gelcointernational.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "5/1/2026"
+        }
+      ]
+    },
+    "INTERESADO": {
+      "cantidad": 22,
+      "top_5": [
+        {
+          "nombre": "Jeimmy Oviedo",
+          "empresa": "Aceites Escenciales Aromas Colombianos",
+          "email": "jeimmy.oviedo@gmail.com",
+          "responsable": "Valentina",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": ""
+        },
+        {
+          "nombre": "Carlos Rendon",
+          "empresa": "Leche Pal Pelo (Grupo Euro Belleza)",
+          "email": "crendon33@hotmail.com",
+          "responsable": "Valentina",
+          "step": "LLAMADA 2 (DIA 6)",
+          "fecha": ""
+        },
+        {
+          "nombre": "",
+          "empresa": "Talsa",
+          "email": "currea@citalsa.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "23/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Megalabs Colombia",
+          "email": "mladino@megalabs.com.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "5/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Nutrium S.A.S.",
+          "email": "camilo.jaramillo@nutrium.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "5/1/2026"
+        }
+      ]
+    },
+    "NO INTERESADO": {
+      "cantidad": 22,
+      "top_5": [
+        {
+          "nombre": "Nelsy Yanneth Nieto Ramirez",
+          "empresa": "Sumicolor",
+          "email": "nnieto@sumicolor.com.co",
+          "responsable": "Nicolas",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": ""
+        },
+        {
+          "nombre": "",
+          "empresa": "Fuller Pinto",
+          "email": "director.ventas@fullerpinto.com",
+          "responsable": "Valentina",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": ""
+        },
+        {
+          "nombre": "",
+          "empresa": "CampoReal",
+          "email": "lucy.silva@camporeal.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "26/12/25"
+        },
+        {
+          "nombre": "",
+          "empresa": "Laboratorios Smart S.A.S",
+          "email": "atorres@laboratoriossmart.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "26/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Productos Vicky S.A.S",
+          "email": "pedro.jerez@productoslavictoria.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "25/12/2025"
+        }
+      ]
+    },
+    "APAGADO": {
+      "cantidad": 22,
+      "top_5": [
+        {
+          "nombre": "",
+          "empresa": "Prosalon Distribuciones",
+          "email": "liliana.chamorro@prosalon.com.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "23/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Inversiones Cz3 S.A.S.",
+          "email": "inverc23@gmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Inversiones Jehm S.A.S.",
+          "email": "inversionesjehm@gmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Agustin Cabrera Juan Camilo",
+          "email": "juan_kmilo1989@hotmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Glinmark S.A.S",
+          "email": "admonglinmark@gmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        }
+      ]
+    },
+    "AGENDADO": {
+      "cantidad": 17,
+      "top_5": [
+        {
+          "nombre": "",
+          "empresa": "Surticosméticos",
+          "email": "ingridaristizabal@surticosmeticos.com",
+          "responsable": "Valentina",
+          "step": "AGENDADO",
+          "fecha": "26/12/25"
+        },
+        {
+          "nombre": "Edison Ariel Orrego",
+          "empresa": "Ariel y sus fantasias",
+          "email": "electronicaayf1@gmail.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        },
+        {
+          "nombre": "Nelson de Jesús Suárez Zuluaga",
+          "empresa": "Distribuidora Surtimos",
+          "email": "distribuidorasurtimos@hotmail.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        },
+        {
+          "nombre": "FERNANDO RODRIGUEZ ORTIZ",
+          "empresa": "Fernando Rodriguez",
+          "email": "fercho28.175@gmail.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        },
+        {
+          "nombre": "EDWIN MAYORGA SALAZAR",
+          "empresa": "Natural power mass",
+          "email": "elypublicidad@hotmail.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        }
+      ]
+    },
+    "NO PERFIL": {
+      "cantidad": 12,
+      "top_5": [
+        {
+          "nombre": "",
+          "empresa": "Gjh Elemental S.A.S.",
+          "email": "gjhelemental.sas@gmail.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "7/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Origen Oro Artesanal S.A.S.",
+          "email": "gerencia@origenartesanal.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "7/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "Comercializadora El Dorado Taraza S.A.S",
+          "email": "doradotaraza@gmail.com",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        },
+        {
+          "nombre": "",
+          "empresa": "C.I. Rap Projects S.A.S.",
+          "email": "gerencia@rapprojects.com.co",
+          "responsable": "",
+          "step": "SIN GESTION",
+          "fecha": "8/1/2026"
+        },
+        {
+          "nombre": "WILSON ANDRES MARMOLEJO GUERRERO",
+          "empresa": "Vidafit507",
+          "email": "pipo1210@hotmail.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        }
+      ]
+    },
+    "LINKEDIN": {
+      "cantidad": 9,
+      "top_5": [
+        {
+          "nombre": "",
+          "empresa": "Laboratorios Legrand S.A",
+          "email": "striana@laboratorioslegrand.com",
+          "responsable": "",
+          "step": "LINKEDIN (DIA 4)",
+          "fecha": "26/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Alianza Team®",
+          "email": "jguerrero@alianzateam.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "26/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Abbott Laboratories - Lafrancol S.A.S",
+          "email": "carlos.riano@abbott.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "23/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Central Cervecera de Colombia",
+          "email": "jorge.caicedo@centralcervecera.com.co",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "23/12/2025"
+        },
+        {
+          "nombre": "",
+          "empresa": "Levapan",
+          "email": "jonathan.cuestas@levapan.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "5/1/2026"
+        }
+      ]
+    },
+    "REPROGRAMADO": {
+      "cantidad": 2,
+      "top_5": [
+        {
+          "nombre": "INVERSIONES Y COMERCIALIZADORA M&C SAS",
+          "empresa": "Inversiones y comercializadora m&c sas",
+          "email": "colormarketcolombia@gmail.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        },
+        {
+          "nombre": "GIOVANY ALEXANDER ALONSO MANJARRES",
+          "empresa": "Suplemuscle",
+          "email": "giovanny1694@outlook.com",
+          "responsable": "",
+          "step": "CLIENTES PLATAM",
+          "fecha": ""
+        }
+      ]
+    },
+    "CORREO": {
+      "cantidad": 1,
+      "top_5": [
+        {
+          "nombre": "",
+          "empresa": "Eterna S.A.",
+          "email": "cristian.gonzalez@eternaplc.com",
+          "responsable": "",
+          "step": "LLAMADA 1 (DIA 3)",
+          "fecha": "7/1/2026"
+        }
+      ]
+    }
+  },
+  "timeline": {
+    "09/01/2026": 30,
+    "13/02/2026": 40,
+    "14/02/2026": 40,
+    "15/02/2026": 40,
+    "16/02/2026": 40,
+    "23/12/2025": 4,
+    "25/12/2025": 1,
+    "26/12/2025": 5,
+    "26/12/25": 3,
+    "5/1/2026": 15,
+    "7/1/2026": 29,
+    "8/1/2026": 30
+  }
+}

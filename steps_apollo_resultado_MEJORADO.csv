@@ -1,0 +1,370 @@
+Type,Task Assignee,Task Status,Contact Name,Priority,Due Date (PST),Completed Date (PST),Sequence,Step,Template,From Email,To Email,Subject,Email Body,Call Purpose,Call Disposition,Task Note,Email Note,Task Created From,Contact Stage,Account,apollo_step_id,contacto,campaña,step_numero,step_nombre,accion_humana,estado_apollo,fecha_programada,fecha_envio
+Email,Santiago Munoz,,,medium,,,,,,,ingridaristizabal@surticosmeticos.com,,,,,,,TablaBase.csv,AGENDADO,Surticosméticos,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,director.ventas@fullerpinto.com,,,,,,,TablaBase.csv,NO INTERESADO,Fuller Pinto,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jarenas@dsierra.com,,,,,,,TablaBase.csv,,Compañia Dsierra S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,lucy.silva@camporeal.co,,,,,,,TablaBase.csv,NO INTERESADO,CampoReal,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,freddy.martinez@carval.com.co,,,,,,,TablaBase.csv,,CARVAL,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,atorres@laboratoriossmart.com,,,,,,,TablaBase.csv,NO INTERESADO,Laboratorios Smart S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,currea@citalsa.com,,,,,,,TablaBase.csv,INTERESADO,Talsa,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,striana@laboratorioslegrand.com,,,,,,,TablaBase.csv,LINKEDIN,Laboratorios Legrand S.A,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,diana.diaz@fla.com.co,,,,,,,TablaBase.csv,NO CONTESTA,Fábrica de Licores y Alcoholes de Antioquia -EICE-,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,liliana.chamorro@prosalon.com.co,,,,,,,TablaBase.csv,APAGADO,Prosalon Distribuciones,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,ricardo.aguirre@pintuco.com,,,,,,,TablaBase.csv,NO CONTESTA,Pintuco,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jguerrero@alianzateam.com,,,,,,,TablaBase.csv,LINKEDIN,Alianza Team®,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,carlos.riano@abbott.com,,,,,,,TablaBase.csv,LINKEDIN,Abbott Laboratories - Lafrancol S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jorge.caicedo@centralcervecera.com.co,,,,,,,TablaBase.csv,LINKEDIN,Central Cervecera de Colombia,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,pedro.jerez@productoslavictoria.co,,,,,,,TablaBase.csv,NO INTERESADO,Productos Vicky S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,laurindo.fernandez@empresas-polar.com,,,,,,,TablaBase.csv,NO CONTESTA,Alimentos Polar,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,esteban.arteaga@medivelius.com,,,,,,,TablaBase.csv,NO INTERESADO,Medivelius Farmacéutica,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jonathan.cuestas@levapan.com,,,,,,,TablaBase.csv,LINKEDIN,Levapan,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,mladino@megalabs.com.co,,,,,,,TablaBase.csv,INTERESADO,Megalabs Colombia,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,felipe@novacolor.com.co,,,,,,,TablaBase.csv,LINKEDIN,Novacolor S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,oscar.uribe@dispapeles.com,,,,,,,TablaBase.csv,NO INTERESADO,Dispapeles,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,caherrera@jgb.com.co,,,,,,,TablaBase.csv,NO INTERESADO,JGB S.A.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,camilo.jaramillo@nutrium.co,,,,,,,TablaBase.csv,INTERESADO,Nutrium S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,manuela.pinilla@gelcointernational.com,,,,,,,TablaBase.csv,NO CONTESTA,Gelco International,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,andres.sanchez@ramo.com.co,,,,,,,TablaBase.csv,NO CONTESTA,Productos Ramo S.A.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,enriquea@sempertex.com,,,,,,,TablaBase.csv,NO CONTESTA,Sempertex SAS,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,wenceslao.giraldo@abbott.com,,,,,,,TablaBase.csv,NO CONTESTA,Abbott Laboratories - Lafrancol S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,mramirez@solla.com,,,,,,,TablaBase.csv,NO CONTESTA,Solla S.A.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,luisa.gomez@levapan.com,,,,,,,TablaBase.csv,LINKEDIN,Levapan,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,claudialascano@italcol.com,,,,,,,TablaBase.csv,NO CONTESTA,Italcol Cuenta Oficial,,,,,,,,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,cristian.gonzalez@eternaplc.com,,,,,,,TablaBase.csv,CORREO,Eterna S.A.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,carola.mora@ramo.com.co,,,,,,,TablaBase.csv,,Productos Ramo S.A.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,"16/01/2026
+",,Pilot – Día 2 – Texto plano,2,,,gianellaromero@belcorp.biz,,,,,,,TablaBase.csv,LINKEDIN,Belcorp,,,Pilot – Día 2 – Texto plano,2,,Email - Texto plano,Enviado/Completado,"16/01/2026
+",
+Email,Santiago Munoz,,,medium,,,,,,,canal.institucional@coolechera.com,,,,,,,TablaBase.csv,LINKEDIN,Coolechera,,,,,,,,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,contabilidad@eslop.co,,,,,,,TablaBase.csv,NO CONTESTA,Comercializadora Internacional Eslop Sas,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@glomco.com.co,,,,,,,TablaBase.csv,NO CONTESTA,C.I. Global Multi Commodities S.A.S,,,,,,,,,
+Email,Santiago Munoz,completed,Osorio Pineda,medium,"2026-01-16T16:01:00.000+00:00
+",16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,notificacionesagd@antioquiagold.com,,,,,,,TablaBase.csv,NO CONTESTA,Comercializadora Internacional Infinita Prosperidad Minera Sas,,Osorio Pineda,Pilot – Día 2 – Texto plano,Día 2,Desconocido,Email - Texto plano,Enviado,"2026-01-16T16:01:00.000+00:00
+",16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,saslandgreen@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Landgreen S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,,,,,cumplimiento@jswcorporation.sas,,,,,,,TablaBase.csv,NO CONTESTA,Ci Jsw Corporation S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,gerencia@gestionelreal.com,,,,,,,TablaBase.csv,NO CONTESTA,C.I. Gestion El Real S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,barbaranvargasj@gmail.com,,,,,,,TablaBase.csv,INTERESADO,Barbaran Vargas Jose Eduardo,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,morenocorporation2019@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Moreno Corporation S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,contabilidad2@moduofi.com,,,,,,,TablaBase.csv,INTERESADO,Industrias Dofi Sas,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,scheduled,Carmen Sierra,medium,"2026-01-16T16:03:00.000+00:00
+",16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,gerencia@elevencorporation.co,,,,,,,TablaBase.csv,NO CONTESTA,Comercializadora Internacional Eleven Corporation S.A.S,,Carmen Sierra,Pilot – Día 2 – Texto plano,Día 2,Desconocido,Email - Texto plano,Enviado,"2026-01-16T16:03:00.000+00:00
+",16/01/2026
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,stellaseguanes@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Seguanes Benitez Giovanis Stella,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,metalsatlassas@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Atlas Metals S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,gerencia.importcaribe@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,C.I. Importcaribe S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,contabilidad1@ciorange.com.co,,,,,,,TablaBase.csv,NO CONTESTA,Sociedad de Comercializacion Internacional de Negocios Naranja y Tecnologia Financiera S.A.S Bic,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,gjhelemental.sas@gmail.com,,,,,,,TablaBase.csv,NO PERFIL,Gjh Elemental S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,menalfredo2@gmail.com,,,,,,,TablaBase.csv,INTERESADO,Chica Mazo Santiago de Jesus,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,duvan28alvarez@gmail.com,,,,,,,TablaBase.csv,NO INTERESADO,Alvarez Correa Wilmer Duban,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,inversionesarmisas@gmail.com,,,,,,,TablaBase.csv,INTERESADO,Inversiones Armi S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,inversioneselmuelle02@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Inversiones El Malecon S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,inversioneslaestrellasas@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Inversiones La Estrella S&L S.A.S.,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,maao3182@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Aristizabal Osorno Mauricio Andres,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 2 – Texto plano,Día 2,,,inversioneselrey12@gmail.com,,,,,,,TablaBase.csv,NO INTERESADO,Inversiones El Rey J.S Sas,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@origenartesanal.com,,,,,,,TablaBase.csv,NO PERFIL,Origen Oro Artesanal S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,compradeorofo@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Orozco Fidel,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,,Pilot – Día 2 – Texto plano,Día 2,,,juandalvarez20@gmail.com,,,,,,,TablaBase.csv,NO INTERESADO,Alvarez Correa Juan David,,,Pilot – Día 2 – Texto plano,Día 2,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,,medium,,,,,,,inversioneseye2021@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Suserquia Mazo Tatiana Andrea,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,grupodeinversionesla@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Grupo de Inversiones L.A Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,doradotaraza@gmail.com,,,,,,,TablaBase.csv,NO PERFIL,Comercializadora El Dorado Taraza S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,cicyensas@gmail.com,,,,,,,TablaBase.csv,NO INTERESADO,Comercializadora Internacional Cyen S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@sgmilenario.com,,,,,,,TablaBase.csv,NO CONTESTA,Sg Milenario S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,inverc23@gmail.com,,,,,,,TablaBase.csv,APAGADO,Inversiones Cz3 S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,grasbergsas@gmail.com,,,,,,,TablaBase.csv,INTERESADO,Grasberg S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,inversionesjehm@gmail.com,,,,,,,TablaBase.csv,APAGADO,Inversiones Jehm S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,juan_kmilo1989@hotmail.com,,,,,,,TablaBase.csv,APAGADO,Agustin Cabrera Juan Camilo,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jodiaz21@hotmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Diaz Diaz Jorge Mario,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,admonglinmark@gmail.com,,,,,,,TablaBase.csv,APAGADO,Glinmark S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,invermineralcolsas@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Invermineralcol S.A.S. en Liquidacion,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,djluishenao1512@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Henao Valencia Luis Carlos,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,denisse.arias@arcelormittal.com,,,,,,,TablaBase.csv,NO CONTESTA,Arcelormittal Projects Colombia S A S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,facturacion@cmgold.com.co,,,,,,,TablaBase.csv,NO CONTESTA,Cmgold S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,administrativo@grupoeld.com,,,,,,,TablaBase.csv,INTERESADO,Grupo Empresarial La Dolores S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,maximueblescontabilidad@hotmail.com,,,,,,,TablaBase.csv,INTERESADO,Maximuebles Jc Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,info@cigrupoexportador.com.co,,,,,,,TablaBase.csv,NO CONTESTA,C.I. Grupo Exportador S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,inversioneslamayorista@hotmail.com,,,,,,,TablaBase.csv,APAGADO,Inversiones La Mayorista E.M S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,facturacion@lospinossas.com,,,,,,,TablaBase.csv,NO CONTESTA,Agroindustrial Los Pinos S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@rapprojects.com.co,,,,,,,TablaBase.csv,NO PERFIL,C.I. Rap Projects S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jbf27811@gmail.com,,,,,,,TablaBase.csv,APAGADO,Baena Marquez Sergio Ivan,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,mercantilcomercialdecolombia@gmail.com,,,,,,,TablaBase.csv,INTERESADO,Mercantil Comercial de Colombia S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,alexcorce@hotmail.com,,,,,,,TablaBase.csv,APAGADO,Corrales Ceballos Alexander,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,ruedainversiones@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Rueda Inversiones S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,info@comergroupsas.com,,,,,,,TablaBase.csv,APAGADO,Rcv Metales S.A.S.,,,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,,,,,metaliferas@gmail.com,,,,,,,TablaBase.csv,APAGADO,Inversiones Metaliferas S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jjaimeiral@yahoo.com,,,,,,,TablaBase.csv,NO CONTESTA,"Apoyar Gestion Sociedad Por Acciones Simplificada ""En Liquidación""",,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,granadosyciagold@gmail.com,,,,,,,TablaBase.csv,NO CONTESTA,Granados Rivera Jorge Mario,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,grupodiazsas@gmail.com,,,,,,,TablaBase.csv,,"Inversiones Grupo Díaz S.A.S ""En Liquidacion""",,,,,,,,,
+Email,Santiago Munoz,,Urrea Garcia Andres Fernando,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,inversionesosmiosas@gmail.com,,,,,,,TablaBase.csv,,Inversiones Osmio S.A.S,,Urrea Garcia Andres Fernando,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Sebastian Botero Bueno,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,contadorjunior@onlymuebles.com.co,,,,,,,TablaBase.csv,,Grupo Only Muebles Sas,,Sebastian Botero Bueno,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Martha Cecilia Mazo Tuberquia,medium,"16/01/2026
+",,Pilot – Día 4 – Texto plano,Desconocido,,,mazosuministrossas@gmail.com,,,,,,,TablaBase.csv,,Mazo Suministros S.A.S,,Martha Cecilia Mazo Tuberquia,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,"16/01/2026
+",
+Email,Santiago Munoz,,Diaz Diaz Emilse Isabel,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,emisabeldiaz90@gmail.com,,,,,,,TablaBase.csv,,Diaz Diaz Emilse Isabel,,Diaz Diaz Emilse Isabel,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Echeverri Vasquez Jorge Luis,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,jecheverri26@gmail.com,,,,,,,TablaBase.csv,,Echeverri Vasquez Jorge Luis,,Echeverri Vasquez Jorge Luis,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Luis Hernando Leal Cortes,medium,"16/01/2026
+",,Pilot – Día 4 – Texto plano,Desconocido,,,lleal@inmining.co,,,,,,,TablaBase.csv,,Intelligent Mining S.A.S.,,Luis Hernando Leal Cortes,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Fallido,"16/01/2026
+",
+Email,Santiago Munoz,,Rodriguez Camargo Carlos Andres,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,contabilidad@hogarvenecia.com,,,,,,,TablaBase.csv,,Hogar Venecia Muebles S.A.S.,,Rodriguez Camargo Carlos Andres,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Maria Tomasa Salcedo Betancur,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,m.metalsgoldsas@gmail.com,,,,,,,TablaBase.csv,,M & M Metals Gold Sas,,Maria Tomasa Salcedo Betancur,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Bedoya Ramos Jeisfer David,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,inversioneshbcaucasia@gmail.com,,,,,,,TablaBase.csv,,Bedoya Ramos Jeisfer David,,Bedoya Ramos Jeisfer David,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Daniel Alfonso Mira Herrera,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,goldminerdp@gmail.com,,,,,,,TablaBase.csv,,Gold Miner D&P S.A.S.,,Daniel Alfonso Mira Herrera,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Juan Pablo Uribe Buelvas,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,zlatogroup@hotmail.com,,,,,,,TablaBase.csv,,Zlato Group S.A.S.,,Juan Pablo Uribe Buelvas,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Sierra Caliz Manuel de Jesus,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,sierracalizmanuel.2018@gmail.com,,,,,,,TablaBase.csv,,Sierra Caliz Manuel de Jesus,,Sierra Caliz Manuel de Jesus,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Tatiana Andrea Suserquia Mazo,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,grupodeinversionestms@gmail.com,,,,,,,TablaBase.csv,,Grupo de Inversiones Tsm S.A.S.,,Tatiana Andrea Suserquia Mazo,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Gonzalez Morales Jairo Andres,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,nancy.salazar@inferex.com.co,,,,,,,TablaBase.csv,,Inferex S.A.S.,,Gonzalez Morales Jairo Andres,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Arrieta Taborda David,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,tabordavid_28@hotmail.com,,,,,,,TablaBase.csv,,Arrieta Taborda David,,Arrieta Taborda David,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Jorge Eliecer Duarte Galviz,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,jordua27@gmail.com,,,,,,,TablaBase.csv,,Inversiones Dugalviz S.A.S,,Jorge Eliecer Duarte Galviz,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Octavio Augusto Lopez Echeverri,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,contabilidad@axxecol.com,,,,,,,TablaBase.csv,,Axxecol S.A.S,,Octavio Augusto Lopez Echeverri,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Margarita Ramirez de Trujillo,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,gerencia@urbana-amc.com,,,,,,,TablaBase.csv,,Urbana Amc S.A.S,,Margarita Ramirez de Trujillo,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Sanchez Alvarez Carlos Mario,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,carlossanchez7814@hotmail.com,,,,,,,TablaBase.csv,,Sanchez Alvarez Carlos Mario,,Sanchez Alvarez Carlos Mario,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Fernando Gonzalez Velasquez,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,info@solutions.com.co,,,,,,,TablaBase.csv,,Solutions Group S.A.S.,,Fernando Gonzalez Velasquez,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Libia Cristina Delgado Vergara,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,lashuaconas@gmail.com,,,,,,,TablaBase.csv,,Las Huaconas S.A.S.,,Libia Cristina Delgado Vergara,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Marquez Tuiran Karina,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,asesoriasaym1@gmail.com,,,,,,,TablaBase.csv,,Marquez Tuiran Karina,,Marquez Tuiran Karina,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Carvajal Ramirez Antonio Jose,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,carvajalramirezmarcela@gmail.com,,,,,,,TablaBase.csv,,Inversiones Carvajal Ramirez S.A.S.,,Carvajal Ramirez Antonio Jose,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Roche Alvarez Luis Fernando,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,compradeorokr@gmail.com,,,,,,,TablaBase.csv,,Roche Alvarez Luis Fernando,,Roche Alvarez Luis Fernando,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Mayra Julieth Jimenez Montalvo,medium,"16/01/2026
+",16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,mayraj@colmexenergy.com,,,,,,,TablaBase.csv,,Colmex Energy S.A.S.,,Mayra Julieth Jimenez Montalvo,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Freddy Andres Mendez Rocha,medium,,16/01/2026,Pilot – Día 4 – Texto plano,Desconocido,,,m.mtrading2016@gmail.com,,,,,,,TablaBase.csv,,M&Mtrading Sas,,Freddy Andres Mendez Rocha,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Jhon Freidy Buenaños Gamboa,medium,"16/01/2026
+",,Pilot – Día 4 – Texto plano,Desconocido,,,asistenteadministrativo@manufacturas.com.co,,,,,,,TablaBase.csv,,Estrategias Manufactureras S.A.S,,Jhon Freidy Buenaños Gamboa,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Fallido,"16/01/2026
+",
+Email,Santiago Munoz,,Elias Orozco Gonzalez,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,eliorozco0101@gmail.com,,,,,,,TablaBase.csv,,Odecopack Sas,,Elias Orozco Gonzalez,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Juan Camilo Velasco Hoyos,medium,,,Pilot – Día 4 – Texto plano,Desconocido,,,gerencia@alphagrupoci.com,,,,,,,TablaBase.csv,,Ci Alpha Grupo S.A.S.,,Juan Camilo Velasco Hoyos,Pilot – Día 4 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Alexander Garcia Zuñiga,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,tallerrexlux@gmail.com,,,,,,,TablaBase.csv,,Inversiones Rexluz S.A.S,,Alexander Garcia Zuñiga,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Jorge Whilem Lozano Mattos,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,whilemlo22@hotmail.com,,,,,,,TablaBase.csv,,Inversiones Mejía J.M S.A.S,,Jorge Whilem Lozano Mattos,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Alba Lucía Giraldo,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,gerencia@fyggold.com,,,,,,,TablaBase.csv,,Franco y Giraldo Gold S.A.S.,,Alba Lucía Giraldo,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Rafael Antonio Machado Gonzalez,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,grupoinversoresdelcauca@gmail.com,,,,,,,TablaBase.csv,,Grupo Inversores del Cauca S.A.S.,,Rafael Antonio Machado Gonzalez,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Dilan Erney Escobar Mejia,medium,"16/01/2026
+",,Pilot – Día 5 – Texto plano,Desconocido,,,gerencia@inverdavi.com,,,,,,,TablaBase.csv,,C.I Inver Davi Sas,,Dilan Erney Escobar Mejia,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Fallido,"16/01/2026
+",
+Email,Santiago Munoz,,Jaime Alirio Carreño Moreno,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,info@manufacturassumapaz.com,,,,,,,TablaBase.csv,,Manufacturas Sumapaz S.A.,,Jaime Alirio Carreño Moreno,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Andres Rozo Garavito,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,gerenciacibirkat@gmail.com,,,,,,,TablaBase.csv,,C.I. Birkat Investment S.A.S,,Andres Rozo Garavito,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Stefany Garcia Uribe,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,gerencia@tierrasantagroup.com.co,,,,,,,TablaBase.csv,,Comercializadora Internacional Tierra Santa Group S.A.S.,,Stefany Garcia Uribe,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Raul Rodriguez,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,info@industrias2rr.com,,,,,,,TablaBase.csv,,Industrias 2Rr S.A.S.,,Raul Rodriguez,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Uber Alberto Correa Alvarez,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,arcangel@smarcangelsas.com,,,,,,,TablaBase.csv,,Sm Arcangel Sas,,Uber Alberto Correa Alvarez,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Fallido,,
+Email,Santiago Munoz,,Hernandez Romero Osvaldo Enrique,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,osvaldoromero14071982@gmail.com,,,,,,,TablaBase.csv,,Hernandez Romero Osvaldo Enrique,,Hernandez Romero Osvaldo Enrique,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Alvarez Ocampo Fabian Alexander,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,pcal-representacionlegalrigid@amcor.com,,,,,,,TablaBase.csv,,Amcor Rigid Packaging de Colombia S.A.S.,,Alvarez Ocampo Fabian Alexander,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Ruiz Parra Ilba Magaly,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,contabilidad@ceramicascastellon.com,,,,,,,TablaBase.csv,,Cerámicas y Materiales Castellón S.A.S.,,Ruiz Parra Ilba Magaly,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Douglas Aceiro,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,luz.bedoya@coats.com,,,,,,,TablaBase.csv,,Coats Cadena Andina S.A.,,Douglas Aceiro,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Jorge Andres Garcia Arango,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,agrocomoditiessas@gmail.com,,,,,,,TablaBase.csv,,Agrocomodities Sas,,Jorge Andres Garcia Arango,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,scheduled,Gloria Lasso,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,comercial@agrocomercialbl.com,,,,,,,TablaBase.csv,,Agrocomercial Bl S.A.S.,,Gloria Lasso,Pilot – Día 5 – Texto plano,Desconocido,Desconocido,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,failed,Francisco Lacouture,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,contabilidad@frusama.com,,,,,,,TablaBase.csv,,C.I. Frusama S.A.S.,,Francisco Lacouture,Pilot – Día 5 – Texto plano,Desconocido,Desconocido,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Dani Jose Ceron Castillo,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,agroflorar96l@hotmail.com,,,,,,,TablaBase.csv,,Grupo Agrofloral de Colombia Sas en Liquidacion,,Dani Jose Ceron Castillo,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Marconyair Neira Galvis,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,tatianavargascontadora@gmail.com,,,,,,,TablaBase.csv,,Ferreagro El Trigal S.A.S.,,Marconyair Neira Galvis,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Ricardo Andres Gonzalez Palacio,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,cafepalsas@hotmail.com,,,,,,,TablaBase.csv,,Comercializadora de Cafe Palacio S.A.S.,,Ricardo Andres Gonzalez Palacio,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Sharon Burstin Elkon,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,contabilidad@rascheltex.com.co,,,,,,,TablaBase.csv,,Rascheltex International S A,,Sharon Burstin Elkon,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Nathalia Sanchez Holguin,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,jcgroup93@gmail.com,,,,,,,TablaBase.csv,,Jc Alliance Group Sas,,Nathalia Sanchez Holguin,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Enrique Sterimberg Svartznaider,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,administrador@tejilar.com,,,,,,,TablaBase.csv,,Tejilar S.A.,,Enrique Sterimberg Svartznaider,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Karen Daniela Velasquez Escobar,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,contabilidad@pacificfoodipf.com,,,,,,,TablaBase.csv,,Inversiones Pacific Foods S.A.S,,Karen Daniela Velasquez Escobar,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Lopez Avila Faunier Rolando,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,emmv69@yahoo.com,,,,,,,TablaBase.csv,,El Corral Agro S.A.S. Zomac,,Lopez Avila Faunier Rolando,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Guzman Vargas Juan David,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,loadinternational2018@gmail.com,,,,,,,TablaBase.csv,,Load Internacional Sas,,Guzman Vargas Juan David,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Wilson Antonio Amezquita Acero,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,hacsanantonio@gmail.com,,,,,,,TablaBase.csv,,Agropecuaria Hacienda San Antonio-S.A.S,,Wilson Antonio Amezquita Acero,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Villota Cardenas Diego Mauricio,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,agroveta200611@gmail.com,,,,,,,TablaBase.csv,,Agroveta S.A.S.,,Villota Cardenas Diego Mauricio,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Rincon Meza Rafael Jose,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,lab@adental.com.co,,,,,,,TablaBase.csv,,Adental S.A.S.,,Rincon Meza Rafael Jose,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Barrera Sandoval Angel Antonio,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,a.barrera@belco.fr,,,,,,,TablaBase.csv,,Belco Colombia S.A.S,,Barrera Sandoval Angel Antonio,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Alvarado Villafradez Maria Fernanda,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,notificaciones@lineadirecta.com.co,,,,,,,TablaBase.csv,,Internacional de Distribuciones de Vestuario de Moda Sociedad Por Acciones Simplificada,,Alvarado Villafradez Maria Fernanda,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Ramiro de Jesus Agudelo Castaño,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,contabilidad@inducascos.com,,,,,,,TablaBase.csv,,Comercializadora Inducascos S.A.S.,,Ramiro de Jesus Agudelo Castaño,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Andres Felipe Duran Gardeazabal,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,finanzas@rimax.com.co,,,,,,,TablaBase.csv,,Plasticos Rimax Sas,,Andres Felipe Duran Gardeazabal,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Rodriguez Montoya Juan David,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,zuleyma.puerta@farogroup.com.co,,,,,,,TablaBase.csv,,Expofaro S.A.S.,,Rodriguez Montoya Juan David,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Marlon Jair Montoya,medium,"16/01/2026
+",16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,contabilidadfabrilicras@gmail.com,,,,,,,TablaBase.csv,,Fabrilicras S.A.S.,,Marlon Jair Montoya,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,"16/01/2026
+",16/01/2026
+Email,Santiago Munoz,,Santos Ibañez Cifuentes,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,simplast_si@hotmail.com,,,,,,,TablaBase.csv,,Simplast & Cia S A S,,Santos Ibañez Cifuentes,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Ocampo Carvajal Aura Fenoriz,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,d.holguinocampo@gmail.com,,,,,,,TablaBase.csv,,Creaciones De Occidente S.A.S,,Ocampo Carvajal Aura Fenoriz,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Jaime Andres Hoyos Giraldo,medium,,,Pilot – Día 5 – Texto plano,Desconocido,,,notificaciones@mattelsa.net,,,,,,,TablaBase.csv,,Mattelsa S.A.S.,,Jaime Andres Hoyos Giraldo,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Programado,,
+Email,Santiago Munoz,,Hinestroza Montoya Mariana,medium,,16/01/2026,Pilot – Día 5 – Texto plano,Desconocido,,,gestionimpuestos@aguabendita.com.co,,,,,,,TablaBase.csv,,Agua Bendita S.A.S.,,Hinestroza Montoya Mariana,Pilot – Día 5 – Texto plano,Desconocido,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@aritexdecolombia.co,,,,,,,TablaBase.csv,,Ag Tex Group S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jefe.contable@miguelcaballero.com,,,,,,,TablaBase.csv,,C.I.A Miguel Caballero Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,facturacionkraquet@gmail.com,,,,,,,TablaBase.csv,,Kraquet Grupo Textil S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@globalbrands.com.co,,,,,,,TablaBase.csv,,Sports Global Brands S A S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@monastery.com.co,,,,,,,TablaBase.csv,,Grupo Empresarial Pemc S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,buzonfacturacion@grupocarolina.com,,,,,,,TablaBase.csv,,Praxedis De Artunduaga Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,info@tesicol.com.co,,,,,,,TablaBase.csv,,Tejidos Sinteticos de Colombia S.A.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,asistente.gerencia@plastimundo.com.co,,,,,,,TablaBase.csv,,Plastimundo S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,info@pelpak.co,,,,,,,TablaBase.csv,,Pelpak S.A,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@johannaortizzf.com,,,,,,,TablaBase.csv,,Johanna Ortiz Zona Franca S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad1@ecobolsascaribe.com,,,,,,,TablaBase.csv,,Ecobolsas Caribe S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,juanmontilla@uniroca.com,,,,,,,TablaBase.csv,,Uniformes Industriales Ropa y Calzado Quin Lop S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@asesoresempresariales.com.co,,,,,,,TablaBase.csv,,Plasticos Correa S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@marathon.com.co,,,,,,,TablaBase.csv,,Grupo Saka S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,acadavid@bodegademoda.com,,,,,,,TablaBase.csv,,Bodega de Moda S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,jvelez@mercico.com,,,,,,,TablaBase.csv,,Mercico S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,comercializadoravmsas900@hotmail.com,,,,,,,TablaBase.csv,,Comercializadora V M S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@soliplast.com.co,,,,,,,TablaBase.csv,,Soluciones Plasticas Industriales S.A. Soliplast S.A.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,naranka_sas@hotmail.com,,,,,,,TablaBase.csv,,Naranka S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,nicollesubliinktex@hotmail.com,,,,,,,TablaBase.csv,,Nicolle Subliinktex S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,notificaciones@artytecmo.com.co,,,,,,,TablaBase.csv,,Arte y Tecnología de Moda S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,espiritu.urbano@hotmail.com,,,,,,,TablaBase.csv,,Espiritu Urbano S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@eurocorsett.com,,,,,,,TablaBase.csv,,Eurocorsett S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,cquintero@tgv.com.co,,,,,,,TablaBase.csv,,T.G.V. de Colombia S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,proveedores@herbeplast.com,,,,,,,TablaBase.csv,,Industrias Plasticas Herbeplast Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,impuestos@crystal.com.co,,,,,,,TablaBase.csv,,Industrias Printex S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@sexunderwear.com.co,,,,,,,TablaBase.csv,,Creaciones Sex S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@madoco21.com,,,,,,,TablaBase.csv,,Madoco Xxi S.A.S. Bic,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,recepcion@united.net.co,,,,,,,TablaBase.csv,,United S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,direccion.contabilidad@mafc.com.co,,,,,,,TablaBase.csv,,Manufacturas Af Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,info@lovemejeans.com,,,,,,,TablaBase.csv,,Ecotex V&A S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad.bohochicsas@gmail.com,,,,,,,TablaBase.csv,,Boho Chic S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerenciaprenco@hotmail.com,,,,,,,TablaBase.csv,,"Prendas Confeccionadas S. A. S., Prenco S A S",,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@feetcolombia.com,,,,,,,TablaBase.csv,,Feet Colombia Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@bostonia.com.co,,,,,,,TablaBase.csv,,Bostonia S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,financiero@modaplass.com,,,,,,,TablaBase.csv,,Grupo Modaplass S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,mherrera@pagoma.com.co,,,,,,,TablaBase.csv,,Pagoma S A,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,nelsong2017@hotmail.com,,,,,,,TablaBase.csv,,Brkl Brooklin Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,plastankcolombialtda@outlook.com,,,,,,,TablaBase.csv,,Plastank Colombia Ltda,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contable.blucher@gmail.com,,,,,,,TablaBase.csv,,Inversiones Blucher S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@dodoactive.com,,,,,,,TablaBase.csv,,Dodo Active Wear S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,facturacion@navissi.com,,,,,,,TablaBase.csv,,Grupo 10Z S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,csiete@colorsiete.com,,,,,,,TablaBase.csv,,Color Siete S.A.S. en Acuerdo Extrajudicial de Reorganizacion,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,creartesas2020@gmail.com,,,,,,,TablaBase.csv,,Crearte By Confeccionarte S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gloriar91@gmail.com,,,,,,,TablaBase.csv,,Ochoa Restrepo Gloria Consuelo,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,zoecompany1@gmail.com,,,,,,,TablaBase.csv,,Zoe Company Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,cagarzon@granuplas.com.co,,,,,,,TablaBase.csv,,Granuplas S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,comercial@compac-sas.com.co,,,,,,,TablaBase.csv,,Compañia De Partes Y Accesorios S A S Compac S A S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,viggogroupsas@viggogroup.com,,,,,,,TablaBase.csv,,Viggo Group Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@peles.co,,,,,,,TablaBase.csv,,Proctech Tecnologia en Proteccion S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@velpacksas.com,,,,,,,TablaBase.csv,,Velpack S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,facturas@tshirtar.com.co,,,,,,,TablaBase.csv,,Tshirt-Ar S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,administracion@si-3.tech,,,,,,,TablaBase.csv,,Sistemas de Integracion en Plasticos S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,lidercontablecreamos@gmail.com,,,,,,,TablaBase.csv,,Creamos S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,asistenteadmon@ipfg.com.co,,,,,,,TablaBase.csv,,Industrias Plasticas Fg S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,calzadoglobalcol@gmail.com,,,,,,,TablaBase.csv,,"Calzado Global Colombia S.A.S. ""En Liquidacion""",,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,info@pastor.com.co,,,,,,,TablaBase.csv,,Adaptica S A S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@dybalaholdingssas.com,,,,,,,TablaBase.csv,,Dybala Holdings S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,dotacioneshseg@hotmail.com,,,,,,,TablaBase.csv,,Dotaciones H-Seg Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@fantasticnight.com,,,,,,,TablaBase.csv,,Industrias Dt S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,andresotaloramoda@hotmail.com,,,,,,,TablaBase.csv,,Andres Otalora S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,luised26@gmail.com,,,,,,,TablaBase.csv,,I.B.S. Zona Franca S.A.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@inverjeans.com,,,,,,,TablaBase.csv,,Inver Jeans S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,studio4.conta@hotmail.com,,,,,,,TablaBase.csv,,Studio 4 S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,info@epiflex.co,,,,,,,TablaBase.csv,,Epiflex Empaques Industriales Y Flexibles S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,legal@internacionaldedotaciones.com,,,,,,,TablaBase.csv,,Internacional De Dotaciones J M S A S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@heraplast.com.co,,,,,,,TablaBase.csv,,Heraplast S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@grupoquiromar.com,,,,,,,TablaBase.csv,,Grupo Quiromar Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,asistente@pronext.com.co,,,,,,,TablaBase.csv,,Pronext Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerenciacolombia@stagmi.com,,,,,,,TablaBase.csv,,Lopez y Lopez Group S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,daniela.pareja@jdfontana.com,,,,,,,TablaBase.csv,,Jd Fontana S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,impuestos@organizacioncardenas.com.co,,,,,,,TablaBase.csv,,Organizacion Cardenas S.A.S,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,aceitesygrasasdeoccidente@gmail.com,,,,,,,TablaBase.csv,,Aceites y Grasas de Occidente S.A.S. en Liquidacion,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@liconsumar.com,,,,,,,TablaBase.csv,,Liconsumar del Magdalena S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@coltropicos.com,,,,,,,TablaBase.csv,,C.I Coltropicos Sas,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,contabilidad@distrialimentosdeoccidente.com,,,,,,,TablaBase.csv,,Distrialimentos de Occidente S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,dosorio@farmfolio.net,,,,,,,TablaBase.csv,,Valle Verde Zona Franca S.A.S.,,,,,,,,,
+Email,Santiago Munoz,,,medium,,,,,,,gerencia@t4colombia.com,,,,,,,TablaBase.csv,,Latam T-Investments Sas,,,,,,,,,
+Email,Santiago Munoz,,Escobar Robledo Alejandro,medium,,16/01/2026,Pilot – Día 8– Texto plano,Día 8,,,daniela.toro@super.com.co,,,,,,,TablaBase.csv,,C.I. Super S.A.S.,,Escobar Robledo Alejandro,Pilot – Día 8– Texto plano,Día 8,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Aristizabal Gomez Manuel Salvador,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,contabilidad@lamontanacol.com,,,,,,,TablaBase.csv,,Trilladora La Montaña S.A.S.,,Aristizabal Gomez Manuel Salvador,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Gutierrez Jose Gregorio,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,j.gutierrez@triplealianza.com.co,,,,,,,TablaBase.csv,,Triple Alianza S.A.S.,,Gutierrez Jose Gregorio,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Olivera Casalin Jose Yesid,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,juridico@surtiabarrotes.com,,,,,,,TablaBase.csv,,Surtiabarrotes Internacional S.A.S.,,Olivera Casalin Jose Yesid,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Pedro Pablo Diaz Perez,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,info@jardinexotics.com.co,,,,,,,TablaBase.csv,,Jardin Exotics S.A.S.,,Pedro Pablo Diaz Perez,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Jorge Diego Jaramillo Bedoya,medium,,,Pilot – Día 8– Texto plano,Día 8,,,contabilidad@asomercol.com,,,,,,,TablaBase.csv,,Mercol Valle S.A.S,,Jorge Diego Jaramillo Bedoya,Pilot – Día 8– Texto plano,Día 8,,Email - Texto plano,Fallido,,
+Email,Santiago Munoz,completed,Camila Serrano,medium,"16/01/2026
+",,Pilot – Día 8– Texto plano,8,,,camila.serrano@cosmolac.com.co,,,,,,,TablaBase.csv,,Cosmolac Sas,,Camila Serrano,Pilot – Día 8– Texto plano,8,Desconocido,Email - Texto plano,Enviado/Completado,"16/01/2026
+",
+Email,Santiago Munoz,,Ricardo Alonso Mejia Hernandez,medium,,16/01/2026,Pilot – Día 8– Texto plano,Día 8,,,pzapata@frutygreen.com,,,,,,,TablaBase.csv,,Fruty Green Packing S.A.S.,,Ricardo Alonso Mejia Hernandez,Pilot – Día 8– Texto plano,Día 8,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Daysin Amparo Delgado,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,ibanezcastilla@icdistribuciones.com,,,,,,,TablaBase.csv,,Ibanez Castilla Distribuciones S.A.,,Daysin Amparo Delgado,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Geverrene Rojas Gordillo,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,sidebysolutions@gmail.com,,,,,,,TablaBase.csv,,C. I. Side By Side Solutions S.A.S,,Geverrene Rojas Gordillo,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Perez Lopez Wilfer Johan,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,auxcontabilidad@productosalco.com,,,,,,,TablaBase.csv,,Productos Alimenticios Alco S.A.S.,,Perez Lopez Wilfer Johan,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Betancur Ochoa Julio Cesar,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,gabrini_@hotmail.com,,,,,,,TablaBase.csv,,Distribuidora Distriabastos S.A.S.,,Betancur Ochoa Julio Cesar,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Astrid Suarez Quiroga,medium,"16/01/2026
+",,Pilot – Día 8– Texto plano,8,,,contabilidad@greenandfresh.com,,,,,,,TablaBase.csv,,Green and Fresh S.A.S.,,Astrid Suarez Quiroga,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Fallido,"16/01/2026
+",
+Email,Santiago Munoz,,Achinte Giraldo Juan Pablo,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,jpachinte@gmail.com,,,,,,,TablaBase.csv,,Food Box S A S,,Achinte Giraldo Juan Pablo,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Helda Ruth Botero Zuluaga,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,infoeleden@eledenco.com.co,,,,,,,TablaBase.csv,,El Eden Comercializadora S.A.S,,Helda Ruth Botero Zuluaga,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Magda Liceth Rubio Cifuentes,medium,,16/01/2026,Pilot – Día 8– Texto plano,Día 8,,,contabilidadlcc@lacalera.com.pe,,,,,,,TablaBase.csv,,La Calera Colombia Sa,,Magda Liceth Rubio Cifuentes,Pilot – Día 8– Texto plano,Día 8,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Suarez Rojas Ezequiel,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,vivecomsur@hotmail.com,,,,,,,TablaBase.csv,,Distrivivecom S.A.S. Zese,,Suarez Rojas Ezequiel,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Santiago Felipe Cruz Jaramillo,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,comercializadoramalta@yahoo.com,,,,,,,TablaBase.csv,,Comercializadora Malta S.A.S.,,Santiago Felipe Cruz Jaramillo,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Ludovic Paul Roger de Meulemeester,medium,,16/01/2026,Pilot – Día 8– Texto plano,Día 8,,,karen.cadena@royalcanin.com,,,,,,,TablaBase.csv,,Royal Canin Colombia S A S,,Ludovic Paul Roger de Meulemeester,Pilot – Día 8– Texto plano,Día 8,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Delgado Lozano Elizabeth,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,tramites@dsierra.com,,,,,,,TablaBase.csv,,Compañia Multiventas S.A.S.,,Delgado Lozano Elizabeth,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Diego Fernando Rubiano Ospina,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,contabilidad@supermercadoselprimo.com,,,,,,,TablaBase.csv,,Grupo Empresarial Rubiano Navarro S.A.S.,,Diego Fernando Rubiano Ospina,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Rodriguez Rendon Mauricio de Jesus,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,contabilidaddyd@hotmail.com,,,,,,,TablaBase.csv,,Distribuidora Comercial Dulces y Dulces S.A.S.,,Rodriguez Rendon Mauricio de Jesus,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Lady Johanna Villaquiran Lavado,medium,,16/01/2026,Pilot – Día 8– Texto plano,Día 8,,,ci.districomers@gmail.com,,,,,,,TablaBase.csv,,Ci Districomers S.A.S en Liquidacion,,Lady Johanna Villaquiran Lavado,Pilot – Día 8– Texto plano,Día 8,,Email - Texto plano,Enviado,,16/01/2026
+Email,Santiago Munoz,,Leonardo Herrera,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,contabilidadgrupoalimenticio1@hotmail.com,,,,,,,TablaBase.csv,,Grupo Alimenticio Alba del Fonce S.A.S.,,Leonardo Herrera,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Landazabal Gutierrez Teresa,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,gerenciacomercial@teres.com.co,,,,,,,TablaBase.csv,,Teres S.A.S.,,Landazabal Gutierrez Teresa,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Juan Pablo Fonseca Sanchez,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,zonacentrofacturaelectronica1@gmail.com,,,,,,,TablaBase.csv,,Comercializadora Disfruver S.A.S.,,Juan Pablo Fonseca Sanchez,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Julia Elena Muñoz Tuiran,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,gerencia@sinubeef.com,,,,,,,TablaBase.csv,,Sinubeef Sas,,Julia Elena Muñoz Tuiran,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Escudero Gallego Edgar De Jesus,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,empresaproveedoradealimentos@epasas.com.co,,,,,,,TablaBase.csv,,Comercializadora Epa S.A.S,,Escudero Gallego Edgar De Jesus,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Yarlen Rojas Boada,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,comercializadorayarlen@hotmail.com,,,,,,,TablaBase.csv,,Comercializadora Nacional Yarlen S.A.S.,,Yarlen Rojas Boada,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",
+Email,Santiago Munoz,,Rafael Arcadio Peña Melo,medium,"15/01/2026
+",,Pilot – Día 8– Texto plano,8,,,direccion.colparadise@gmail.com,,,,,,,TablaBase.csv,,Ci Colombia Paradise Sas,,Rafael Arcadio Peña Melo,Pilot – Día 8– Texto plano,8,,Email - Texto plano,Enviado/Completado,"15/01/2026
+",

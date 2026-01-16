@@ -1,0 +1,188 @@
+Type,Task Assignee,Task Status,Contact Name,Priority,Due Date (PST),Completed Date (PST),Sequence,Step,Template,From Email,To Email,Subject,Email Body,Call Purpose,Call Disposition,Task Note,Email Note,Task Created From,Contact Stage,Account
+Phone Call,Santiago Munoz,scheduled,Camilo,medium,"January 12, 2026 08:00","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Camilo,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Nutrium S.A.S ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Nutrium S.A.S.
+Phone Call,Santiago Munoz,scheduled,Claudia,medium,"January 12, 2026 08:02","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Claudia,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Italcol Cuenta Oficial ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Italcol Cuenta Oficial
+Phone Call,Santiago Munoz,scheduled,Esteban Arteaga,medium,"January 12, 2026 05:05","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Esteban,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Medivelius Farmacéutica ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Medivelius Farmacéutica
+Phone Call,Santiago Munoz,scheduled,Laurindo,medium,"January 12, 2026 08:03","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Laurindo,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Alimentos Polar ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Alimentos Polar
+Phone Call,Santiago Munoz,scheduled,Manuela Pinilla Villegas,medium,"January 12, 2026 05:05","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Manuela,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Gelco International ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Gelco International
+Phone Call,Santiago Munoz,scheduled,Luisa,medium,"January 12, 2026 08:00","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Luisa,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Levapan ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Levapan
+Phone Call,Santiago Munoz,scheduled,Jonathan Cuestas,medium,"January 12, 2026 05:05","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Jonathan,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Levapan ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Levapan
+Phone Call,Santiago Munoz,completed,Martin Ladino Clavijo,medium,"January 12, 2026 05:03","January 16, 2026 12:59",Pilot – Día 1 – Texto plano,3,,,,,,Prospecting Call,Connected - Positive,"SECUENCIA ENVIADA, CLIENTE INTERESADO, PIDE QUE LO LLAME EL JUEVES O VIERNES DE LA 3RA SEMANA DE ENERO YA QUE ESTABA EN VACACIONES","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Interested,Megalabs Colombia
+Phone Call,Santiago Munoz,scheduled,Mauricio Ramirez,medium,"January 12, 2026 05:03","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Mauricio,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Solla S.A ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Solla S.A.
+Phone Call,Santiago Munoz,scheduled,Cesar Herrera,medium,"January 12, 2026 05:05","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Cesar,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en JGB S.A ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,JGB S.A.
+Phone Call,Santiago Munoz,scheduled,Wenceslao,medium,"January 12, 2026 08:05","",Pilot – Día 1 – Texto plano,3,,,,,,,,"<div>Buenas tardes hablo con Wenceslao,</div><div><br></div><div><br></div><div>Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en Abbott Laboratories ofrecen estos plazos o todo es de contado?</div><div><br></div><div>Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:</div><div><br></div><div>-Cubrir el riesgo crediticio de sus clientes</div><div>-Liberar la gestión de cobranza</div><div>-Generar adelanto de caja de las cuentas por cobrar</div><div>-Entregar al equipo comercial una herramienta para otorgar crédito ágil</div><div><br></div><div>Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?</div><div><br></div><div>Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.</div><div><br></div>","Buenas tardes hablo con {{first_name}},
+
+
+Cómo estas?  hablas con Santiago Muñoz De Platam, me estoy contactando contigo porque estamos generando alianzas con empresas como la tuya para que ustedes puedan ofrecerle crédito/plazos a sus clientes. A hoy en {{company}} ofrecen estos plazos o todo es de contado?
+
+Lo pregunto porque generando esta alianza ustedes podrían aumentar significativamente las ventas ya que no se verían frenadas por la falta de pago de sus principales clientes, nosotros tenemos la posibilidad de ofrecerle los siguientes beneficios a tu compañia:
+
+-Cubrir el riesgo crediticio de sus clientes
+-Liberar la gestión de cobranza
+-Generar adelanto de caja de las cuentas por cobrar
+-Entregar al equipo comercial una herramienta para otorgar crédito ágil
+
+Me gustaría que lo pudiéramos revisar en una reunión con nuestra directora comercial, que día te quedaría bien?
+
+Perfecto muchas gracias por tu tiempo, quedamos asi y nos vemos en la reunion.
+
+",Apollo UI,Unresponsive,Abbott Laboratories - Lafrancol S.A.S
