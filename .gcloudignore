@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+/tmp/
+
+# Backups
+apollo_progreso_*.json
+apollo_errores.csv
+contactos_sin_info_apollo.csv
+
+# Old versions
+crm_dashboard.html
+crm_view.html
+crm_dashboard_data.json

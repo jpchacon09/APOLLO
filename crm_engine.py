@@ -45,20 +45,34 @@ def generate_full_data():
     for h in historial_eventos:
         m_type = h.get('Type', '').lower()
         status = h.get('Task Status', '').lower()
-        
+
         # 1. Emails
         if 'email' in m_type:
             stats["email"]["total"] += 1
-            if status in ['sent', 'completed', 'opened', 'clicked', 'replied']:
+            # Incluir scheduled como emails enviados/programados
+            if status in ['sent', 'completed', 'opened', 'clicked', 'replied', 'scheduled']:
                 stats["email"]["sent"] += 1
             if 'replied' in status or 'respondido' in status:
                 stats["email"]["replied"] += 1
-        
+
         # 2. LinkedIn
         elif 'linkedin' in m_type:
             stats["linkedin"]["sent"] += 1
             if 'replied' in status:
                 stats["linkedin"]["replied"] += 1
+
+    # Procesar contactos de Apollo en TablaBase
+    for c in contactos_base:
+        apollo_status = c.get('apollo_status', '').lower()
+
+        # Contar emails de Apollo
+        if apollo_status == 'scheduled':
+            # Evitar contar duplicados si ya están en historial_eventos
+            email = c.get('EMAIL_LIMPIO', '').strip().lower()
+            en_historial = any(h.get('To Email', '').lower() == email for h in historial_eventos)
+            if not en_historial:
+                stats["email"]["total"] += 1
+                stats["email"]["sent"] += 1
 
     # Procesar Tabla Base (Manual Actions & States)
     for c in contactos_base:
@@ -76,6 +90,51 @@ def generate_full_data():
         if 'AGENDADO' in estado or 'REUNION' in estado:
             stats["calls"]["meetings"] += 1
 
+    # 3. Análisis de Steps y Conversiones
+    steps_metrics = defaultdict(lambda: {
+        'total': 0, 'interesado': 0, 'agendado': 0,
+        'no_interesado': 0, 'no_contesta': 0, 'sin_respuesta': 0
+    })
+
+    observaciones_recientes = []
+
+    for c in contactos_base:
+        step = c.get('STEP', '')
+        estado = c.get('ESTADO', '').upper()
+
+        if step and step not in ['SIN GESTION', '']:
+            steps_metrics[step]['total'] += 1
+
+            if 'INTERESADO' in estado:
+                steps_metrics[step]['interesado'] += 1
+            elif 'AGENDADO' in estado:
+                steps_metrics[step]['agendado'] += 1
+            elif 'NO INTERESADO' in estado or 'NO PERFIL' in estado:
+                steps_metrics[step]['no_interesado'] += 1
+            elif 'NO CONTESTA' in estado or 'APAGADO' in estado:
+                steps_metrics[step]['no_contesta'] += 1
+            else:
+                steps_metrics[step]['sin_respuesta'] += 1
+
+        # Capturar observaciones con contenido real
+        obs = c.get('observaciones', '').strip()
+        if obs and len(obs) > 10:
+            observaciones_recientes.append({
+                'contacto': c.get('Contacto', 'Sin nombre'),
+                'empresa': c.get('Empresa', ''),
+                'observacion': obs,
+                'estado': c.get('ESTADO', ''),
+                'step': c.get('STEP', ''),
+                'fecha': c.get('fecha gestion envio secuencia 2025- 2026', '')
+            })
+
+    # Ordenar observaciones por fecha (las más recientes primero)
+    observaciones_recientes = sorted(
+        observaciones_recientes,
+        key=lambda x: x.get('fecha', ''),
+        reverse=True
+    )[:30]
+
     # 3. Pipeline Mapping
     pipeline = {
         'NUEVOS': [],
@@ -84,7 +143,7 @@ def generate_full_data():
         'AGENDADOS': [],
         'RECHAZADOS': []
     }
-    
+
     status_counts = Counter()
     for c in contactos_base:
         estado = c.get('ESTADO', 'SIN GESTION').upper()
@@ -98,7 +157,9 @@ def generate_full_data():
             'name': c.get('Contacto') or 'Sin Nombre',
             'company': c.get('Empresa'),
             'email': c.get('EMAIL_LIMPIO'),
-            'apollo_status': c.get('estado_apollo') or c.get('ESTADO')
+            'apollo_status': c.get('estado_apollo') or c.get('apollo_status') or c.get('ESTADO'),
+            'current_campaign': c.get('campaña') or '',
+            'current_step': c.get('step_numero') or c.get('STEP') or ''
         })
         status_counts[category] += 1
 
@@ -114,13 +175,18 @@ def generate_full_data():
     final_data = {
         'timestamp': datetime.now().isoformat(),
         'kpis_v2': stats,
-        'pipeline': {k: v[:50] for k, v in pipeline.items()},
+        'steps_metrics': dict(steps_metrics),
+        'observaciones': observaciones_recientes,
+        'pipeline': {k: v[:100] for k, v in pipeline.items()},
         'recent_activity': [{
             'contact': h.get('Contact Name'),
+            'account': h.get('Account'),
             'type': h.get('Type'),
             'status': h.get('Task Status'),
+            'sequence': h.get('Sequence') or 'Sin secuencia',
+            'step': h.get('Step') or '-',
             'date': h.get('Completed Date (PST)') or h.get('Due Date (PST)')
-        } for h in historial_ordenado[:20]],
+        } for h in historial_ordenado[:30]],
         'counts': dict(status_counts)
     }
 

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-01-16T17:20:11.476165",
+  "timestamp": "2026-01-16T20:44:18.366530",
   "kpis_v2": {
     "email": {
-      "sent": 0,
+      "sent": 397,
       "replied": 0,
       "total": 397
     },
@@ -20,307 +20,1091 @@
       "replied": 0
     }
   },
+  "steps_metrics": {
+    "LLAMADA 1 (DIA 3)": {
+      "total": 59,
+      "interesado": 19,
+      "agendado": 0,
+      "no_interesado": 2,
+      "no_contesta": 27,
+      "sin_respuesta": 11
+    },
+    "LLAMADA 2 (DIA 6)": {
+      "total": 1,
+      "interesado": 1,
+      "agendado": 0,
+      "no_interesado": 0,
+      "no_contesta": 0,
+      "sin_respuesta": 0
+    },
+    "AGENDADO": {
+      "total": 1,
+      "interesado": 0,
+      "agendado": 1,
+      "no_interesado": 0,
+      "no_contesta": 0,
+      "sin_respuesta": 0
+    },
+    "LINKEDIN (DIA 4)": {
+      "total": 1,
+      "interesado": 0,
+      "agendado": 0,
+      "no_interesado": 0,
+      "no_contesta": 0,
+      "sin_respuesta": 1
+    },
+    "CLIENTES PLATAM": {
+      "total": 120,
+      "interesado": 19,
+      "agendado": 16,
+      "no_interesado": 8,
+      "no_contesta": 53,
+      "sin_respuesta": 24
+    }
+  },
+  "observaciones": [
+    {
+      "contacto": "",
+      "empresa": "Suserquia Mazo Tatiana Andrea",
+      "observacion": "SECUENCIA ENVIADA, NO CONTESTA, NO TIENE WHASTAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Grupo de Inversiones L.A Sas",
+      "observacion": "SECUENCIA ENVIADA, NO CONTESTA, NO TIENE WHASTAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Comercializadora El Dorado Taraza S.A.S",
+      "observacion": "ES ODONTOLOGO Y NO LE SIRVE.",
+      "estado": "NO PERFIL",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Comercializadora Internacional Cyen S.A.S",
+      "observacion": "SECUENCIA ENVIADA//CLIENTE INFORMA QUE CAMBIO DE EMPRESA Y AHORITA NO TIENEN NINGUNA INFORMACION, DICE QUE GUARDA MI NUMERO PARA UNA FUTURA OCACION",
+      "estado": "NO INTERESADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Sg Milenario S.A.S",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Inversiones Cz3 S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Grasberg S.A.S.",
+      "observacion": "SECUENCIA ENVIADA: 2:45 QUIERE ESCUCHAR MAS, Y SI LE INTERESA, TODO LO MANEJA DE CONTADO",
+      "estado": "INTERESADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Inversiones Jehm S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Agustin Cabrera Juan Camilo",
+      "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Diaz Diaz Jorge Mario",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Glinmark S.A.S",
+      "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Invermineralcol S.A.S. en Liquidacion",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Henao Valencia Luis Carlos",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Arcelormittal Projects Colombia S A S",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Cmgold S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Grupo Empresarial La Dolores S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// HABLE CON DIANA, ME PIDE QUE LOS LLAME EL 27 DE ENERO QUE LLEGA LA PERSONA ENCARGADA PARA TOMAR ESAS DECISIONES. ESE DIA ME DICEN SI LES SIRVE O NO. JEFE DE CARTERA",
+      "estado": "INTERESADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Maximuebles Jc Sas",
+      "observacion": "SECUENCIA NO ENVIADA, DEISY DESPUES DE LAS 2 PM Y HABLO CON LA PERSONA ENCARGADA PORQ AHORITA ESTAN ALMORZANDO",
+      "estado": "INTERESADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "C.I. Grupo Exportador S.A.S",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Inversiones La Mayorista E.M S.A.S",
+      "observacion": "SECUENCIA ENVIADA// NO TIENE WHATSAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Agroindustrial Los Pinos S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// CLIENTE REPETIDO, EN NUMERO",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "C.I. Rap Projects S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// SOLO LE VENDEN AL EXTRANJERO, NO PUEDEN VENDER ACA EN COLOMBIA",
+      "estado": "NO PERFIL",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Baena Marquez Sergio Ivan",
+      "observacion": "SECUENCIA ENVIADA// NO TIENE WHATSAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Mercantil Comercial de Colombia S.A.S.",
+      "observacion": "SECUENCIA ENVIADA, TODO ES DE CONTADO, ME PIDEN Q LES ENVIE OFERTA COMERCIAL...correo enviado el 13 de enero",
+      "estado": "INTERESADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Corrales Ceballos Alexander",
+      "observacion": "SECUENCIA ENVIADA//NO TIENE WHATSAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Rueda Inversiones S.A.S.",
+      "observacion": "SECUENCIA ENVIADA//SE ENVIA WHASTAPP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Rcv Metales S.A.S.",
+      "observacion": "SECUENCIA ENVIADA// SE ENVIA WHASTAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Inversiones Metaliferas S.A.S.",
+      "observacion": "SECUENCIA ENVIADA//NO TIENE WHATSAPP",
+      "estado": "APAGADO",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Apoyar Gestion Sociedad Por Acciones Simplificada \"En Liquidación\"",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA, NO TIENE WHATSAPP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Granados Rivera Jorge Mario",
+      "observacion": "SECUENCIA ENVIADA// NO CONTESTA, NO TIENE WHATSAPP",
+      "estado": "NO CONTESTA",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    },
+    {
+      "contacto": "",
+      "empresa": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"",
+      "observacion": "SECUENCIA ENVIADA//SE ENVIA WHASTAPP, SEGUNDO NUMERO REPETIDO CON OTRO CLIENTE",
+      "estado": "",
+      "step": "SIN GESTION",
+      "fecha": "8/1/2026"
+    }
+  ],
   "pipeline": {
     "NUEVOS": [
       {
         "name": "Jackeline Ortega",
         "company": "Megapets",
         "email": "megaofertasec@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Compañia Dsierra S.A.S.",
         "email": "jarenas@dsierra.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "CARVAL",
         "email": "freddy.martinez@carval.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Laboratorios Legrand S.A",
         "email": "striana@laboratorioslegrand.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LINKEDIN (DIA 4)"
       },
       {
         "name": "Sin Nombre",
         "company": "Fábrica de Licores y Alcoholes de Antioquia -EICE-",
         "email": "diana.diaz@fla.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Prosalon Distribuciones",
         "email": "liliana.chamorro@prosalon.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Pintuco",
         "email": "ricardo.aguirre@pintuco.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Alianza Team®",
         "email": "jguerrero@alianzateam.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Abbott Laboratories - Lafrancol S.A.S",
         "email": "carlos.riano@abbott.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Central Cervecera de Colombia",
         "email": "jorge.caicedo@centralcervecera.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Alimentos Polar",
         "email": "laurindo.fernandez@empresas-polar.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Levapan",
         "email": "jonathan.cuestas@levapan.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Novacolor S.A.S",
         "email": "felipe@novacolor.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Gelco International",
         "email": "manuela.pinilla@gelcointernational.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Productos Ramo S.A.",
         "email": "andres.sanchez@ramo.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Sempertex SAS",
         "email": "enriquea@sempertex.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Abbott Laboratories - Lafrancol S.A.S",
         "email": "wenceslao.giraldo@abbott.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Solla S.A.",
         "email": "mramirez@solla.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Levapan",
         "email": "luisa.gomez@levapan.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Italcol Cuenta Oficial",
         "email": "claudialascano@italcol.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Eterna S.A.",
         "email": "cristian.gonzalez@eternaplc.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Productos Ramo S.A.",
         "email": "carola.mora@ramo.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Belcorp",
         "email": "gianellaromero@belcorp.biz",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Coolechera",
         "email": "canal.institucional@coolechera.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Comercializadora Internacional Eslop Sas",
         "email": "contabilidad@eslop.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "C.I. Global Multi Commodities S.A.S",
         "email": "gerencia@glomco.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Osorio Pineda",
         "company": "Comercializadora Internacional Infinita Prosperidad Minera Sas",
         "email": "notificacionesagd@antioquiagold.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Landgreen S.A.S.",
         "email": "saslandgreen@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Ci Jsw Corporation S.A.S",
         "email": "cumplimiento@jswcorporation.sas",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "C.I. Gestion El Real S.A.S.",
         "email": "gerencia@gestionelreal.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Moreno Corporation S.A.S.",
         "email": "morenocorporation2019@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Carmen Sierra",
         "company": "Comercializadora Internacional Eleven Corporation S.A.S",
         "email": "gerencia@elevencorporation.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Seguanes Benitez Giovanis Stella",
         "email": "stellaseguanes@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Atlas Metals S.A.S.",
         "email": "metalsatlassas@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "C.I. Importcaribe S.A.S.",
         "email": "gerencia.importcaribe@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Sociedad de Comercializacion Internacional de Negocios Naranja y Tecnologia Financiera S.A.S Bic",
         "email": "contabilidad1@ciorange.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Gjh Elemental S.A.S.",
         "email": "gjhelemental.sas@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Inversiones El Malecon S.A.S.",
         "email": "inversioneselmuelle02@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Inversiones La Estrella S&L S.A.S.",
         "email": "inversioneslaestrellasas@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Aristizabal Osorno Mauricio Andres",
         "email": "maao3182@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Origen Oro Artesanal S.A.S.",
         "email": "gerencia@origenartesanal.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Orozco Fidel",
         "email": "compradeorofo@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Suserquia Mazo Tatiana Andrea",
         "email": "inversioneseye2021@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Grupo de Inversiones L.A Sas",
         "email": "grupodeinversionesla@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Comercializadora El Dorado Taraza S.A.S",
         "email": "doradotaraza@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Sg Milenario S.A.S",
         "email": "contabilidad@sgmilenario.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Inversiones Cz3 S.A.S.",
         "email": "inverc23@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Inversiones Jehm S.A.S.",
         "email": "inversionesjehm@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Agustin Cabrera Juan Camilo",
         "email": "juan_kmilo1989@hotmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Diaz Diaz Jorge Mario",
         "email": "jodiaz21@hotmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Glinmark S.A.S",
+        "email": "admonglinmark@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Invermineralcol S.A.S. en Liquidacion",
+        "email": "invermineralcolsas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Henao Valencia Luis Carlos",
+        "email": "djluishenao1512@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Arcelormittal Projects Colombia S A S",
+        "email": "denisse.arias@arcelormittal.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Cmgold S.A.S.",
+        "email": "facturacion@cmgold.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "C.I. Grupo Exportador S.A.S",
+        "email": "info@cigrupoexportador.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Inversiones La Mayorista E.M S.A.S",
+        "email": "inversioneslamayorista@hotmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Agroindustrial Los Pinos S.A.S.",
+        "email": "facturacion@lospinossas.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "C.I. Rap Projects S.A.S.",
+        "email": "gerencia@rapprojects.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Baena Marquez Sergio Ivan",
+        "email": "jbf27811@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Corrales Ceballos Alexander",
+        "email": "alexcorce@hotmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Rueda Inversiones S.A.S.",
+        "email": "ruedainversiones@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Rcv Metales S.A.S.",
+        "email": "info@comergroupsas.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Inversiones Metaliferas S.A.S.",
+        "email": "metaliferas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Apoyar Gestion Sociedad Por Acciones Simplificada \"En Liquidación\"",
+        "email": "jjaimeiral@yahoo.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Granados Rivera Jorge Mario",
+        "email": "granadosyciagold@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sin Nombre",
+        "company": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"",
+        "email": "grupodiazsas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Urrea Garcia Andres Fernando",
+        "company": "Inversiones Osmio S.A.S",
+        "email": "inversionesosmiosas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sebastian Botero Bueno",
+        "company": "Grupo Only Muebles Sas",
+        "email": "contadorjunior@onlymuebles.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Martha Cecilia Mazo Tuberquia",
+        "company": "Mazo Suministros S.A.S",
+        "email": "mazosuministrossas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Diaz Diaz Emilse Isabel",
+        "company": "Diaz Diaz Emilse Isabel",
+        "email": "emisabeldiaz90@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Echeverri Vasquez Jorge Luis",
+        "company": "Echeverri Vasquez Jorge Luis",
+        "email": "jecheverri26@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Luis Hernando Leal Cortes",
+        "company": "Intelligent Mining S.A.S.",
+        "email": "lleal@inmining.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Rodriguez Camargo Carlos Andres",
+        "company": "Hogar Venecia Muebles S.A.S.",
+        "email": "contabilidad@hogarvenecia.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Maria Tomasa Salcedo Betancur",
+        "company": "M & M Metals Gold Sas",
+        "email": "m.metalsgoldsas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Bedoya Ramos Jeisfer David",
+        "company": "Bedoya Ramos Jeisfer David",
+        "email": "inversioneshbcaucasia@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Daniel Alfonso Mira Herrera",
+        "company": "Gold Miner D&P S.A.S.",
+        "email": "goldminerdp@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Juan Pablo Uribe Buelvas",
+        "company": "Zlato Group S.A.S.",
+        "email": "zlatogroup@hotmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sierra Caliz Manuel de Jesus",
+        "company": "Sierra Caliz Manuel de Jesus",
+        "email": "sierracalizmanuel.2018@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Tatiana Andrea Suserquia Mazo",
+        "company": "Grupo de Inversiones Tsm S.A.S.",
+        "email": "grupodeinversionestms@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Gonzalez Morales Jairo Andres",
+        "company": "Inferex S.A.S.",
+        "email": "nancy.salazar@inferex.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Arrieta Taborda David",
+        "company": "Arrieta Taborda David",
+        "email": "tabordavid_28@hotmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Jorge Eliecer Duarte Galviz",
+        "company": "Inversiones Dugalviz S.A.S",
+        "email": "jordua27@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Octavio Augusto Lopez Echeverri",
+        "company": "Axxecol S.A.S",
+        "email": "contabilidad@axxecol.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Margarita Ramirez de Trujillo",
+        "company": "Urbana Amc S.A.S",
+        "email": "gerencia@urbana-amc.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Sanchez Alvarez Carlos Mario",
+        "company": "Sanchez Alvarez Carlos Mario",
+        "email": "carlossanchez7814@hotmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Fernando Gonzalez Velasquez",
+        "company": "Solutions Group S.A.S.",
+        "email": "info@solutions.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Libia Cristina Delgado Vergara",
+        "company": "Las Huaconas S.A.S.",
+        "email": "lashuaconas@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Marquez Tuiran Karina",
+        "company": "Marquez Tuiran Karina",
+        "email": "asesoriasaym1@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Carvajal Ramirez Antonio Jose",
+        "company": "Inversiones Carvajal Ramirez S.A.S.",
+        "email": "carvajalramirezmarcela@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Roche Alvarez Luis Fernando",
+        "company": "Roche Alvarez Luis Fernando",
+        "email": "compradeorokr@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Mayra Julieth Jimenez Montalvo",
+        "company": "Colmex Energy S.A.S.",
+        "email": "mayraj@colmexenergy.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Freddy Andres Mendez Rocha",
+        "company": "M&Mtrading Sas",
+        "email": "m.mtrading2016@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Jhon Freidy Buenaños Gamboa",
+        "company": "Estrategias Manufactureras S.A.S",
+        "email": "asistenteadministrativo@manufacturas.com.co",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Elias Orozco Gonzalez",
+        "company": "Odecopack Sas",
+        "email": "eliorozco0101@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Juan Camilo Velasco Hoyos",
+        "company": "Ci Alpha Grupo S.A.S.",
+        "email": "gerencia@alphagrupoci.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Roman Fabio Ramirez Guerron",
+        "company": "Comercializadora Group Sas",
+        "email": "info@comergroupsas.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Alexander Garcia Zuñiga",
+        "company": "Inversiones Rexluz S.A.S",
+        "email": "tallerrexlux@gmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Jorge Whilem Lozano Mattos",
+        "company": "Inversiones Mejía J.M S.A.S",
+        "email": "whilemlo22@hotmail.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
+      },
+      {
+        "name": "Alba Lucía Giraldo",
+        "company": "Franco y Giraldo Gold S.A.S.",
+        "email": "gerencia@fyggold.com",
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       }
     ],
     "EN_SECUENCIA": [],
@@ -329,265 +1113,353 @@
         "name": "Jeimmy Oviedo",
         "company": "Aceites Escenciales Aromas Colombianos",
         "email": "jeimmy.oviedo@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Carlos Rendon",
         "company": "Leche Pal Pelo (Grupo Euro Belleza)",
         "email": "crendon33@hotmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 2 (DIA 6)"
       },
       {
         "name": "Nelsy Yanneth Nieto Ramirez",
         "company": "Sumicolor",
         "email": "nnieto@sumicolor.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Fuller Pinto",
         "email": "director.ventas@fullerpinto.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "CampoReal",
         "email": "lucy.silva@camporeal.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Laboratorios Smart S.A.S",
         "email": "atorres@laboratoriossmart.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Talsa",
         "email": "currea@citalsa.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Productos Vicky S.A.S",
         "email": "pedro.jerez@productoslavictoria.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Medivelius Farmacéutica",
         "email": "esteban.arteaga@medivelius.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Megalabs Colombia",
         "email": "mladino@megalabs.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Dispapeles",
         "email": "oscar.uribe@dispapeles.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "JGB S.A.",
         "email": "caherrera@jgb.com.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Nutrium S.A.S.",
         "email": "camilo.jaramillo@nutrium.co",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Barbaran Vargas Jose Eduardo",
         "email": "barbaranvargasj@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Industrias Dofi Sas",
         "email": "contabilidad2@moduofi.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Chica Mazo Santiago de Jesus",
         "email": "menalfredo2@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Alvarez Correa Wilmer Duban",
         "email": "duvan28alvarez@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Inversiones Armi S.A.S.",
         "email": "inversionesarmisas@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Inversiones El Rey J.S Sas",
         "email": "inversioneselrey12@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Alvarez Correa Juan David",
         "email": "juandalvarez20@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
         "name": "Sin Nombre",
         "company": "Comercializadora Internacional Cyen S.A.S",
         "email": "cicyensas@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Grasberg S.A.S.",
         "email": "grasbergsas@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Grupo Empresarial La Dolores S.A.S.",
         "email": "administrativo@grupoeld.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Maximuebles Jc Sas",
         "email": "maximueblescontabilidad@hotmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Sin Nombre",
         "company": "Mercantil Comercial de Colombia S.A.S.",
         "email": "mercantilcomercialdecolombia@gmail.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "SIN GESTION"
       },
       {
         "name": "Yacid Fernando Orozco Bedoya",
         "company": "Distribuidora de belleza Guadalupe",
         "email": "distriguadalupe@hotmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "COMERCIALIZADORA SUPER REY SAS",
         "company": "SUPER REY DE LOS REMATES",
         "email": "vanesa.ramireselrey@gmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "Ehilen Arévalo Quintero",
         "company": "Cacharrería Fredy André",
         "email": "eilenarevalo787@gmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "LUZ ADRIANA BUITRAGO ARCILA",
         "company": "Tienda de belleza adri",
         "email": "adrianab0412@hotmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "MARTHA PATRICIA ZAMBRANO CLAVIJO",
         "company": "Distribuidora cabello riso",
         "email": "alejandra_0088@hotmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "ORLANDO JIMENEZ SANCHEZ",
         "company": "Muebles oddy",
         "email": "mueblesoddy@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "LUISA FERNANDA ALFEREZ TRIVIÑO",
         "company": "SURTI SALON'S DISTRIBUIDOR",
         "email": "luisita_1904@hotmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "Carmen Alicia Bastidas España",
         "company": "Fit Comercial",
         "email": "alicia.bastidas13e@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "JAMES RIASCOS GONZALEZ",
         "company": "Muebleria Kairos",
         "email": "jamesriascosgonzalez@gmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "SANDRA PATRICIA RODRIGUEZ CORTEZ",
         "company": "House confort",
         "email": "patriciacor0324@gmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "NAZARETH PEÑAFIEL MUÑOZ",
         "company": "El nogal",
         "email": "nazitarafa@gmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "ALVARO LONDOÑO ARBELAEZ",
         "company": "Muebleria kelfer sas",
         "email": "alvarolondono64@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "ROSAURA BATALLA PRADO",
         "company": "Don Muebles",
         "email": "donmuebles@hotmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "OSWALDO JOSE NIAMPIRA GUTIERREZ",
         "company": "DROGUERIAS ULTRA",
         "email": "niampira31@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "ELSY ESMERALDA PULGARIN NARANJO",
         "company": "Tienda de belleza fmzp",
         "email": "alexzapata0987@gmail.com",
-        "apollo_status": "NO INTERESADO"
+        "apollo_status": "NO INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "BRYAN AGREDO GUTIERREZ",
         "company": "Colchones cielo azul",
         "email": "0colchonescieloazul9@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "SUPERMATERIALES AIM SAHAGUN SAS",
         "company": "SUPERMATERIALES AIM SAHAGUN",
         "email": "901905809@glerpmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "NELSON MANUEL MARTINEZ SANCHEZ",
         "company": "ISES MOVILIDAD ELECTRICA",
         "email": "nm11martinez@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "OLIVA PABON JIMENEZ",
         "company": "Salas Tapitex",
         "email": "olivapabon4@gmail.com",
-        "apollo_status": "INTERESADO"
+        "apollo_status": "INTERESADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       }
     ],
     "AGENDADOS": [
@@ -595,103 +1467,137 @@
         "name": "Sin Nombre",
         "company": "Surticosméticos",
         "email": "ingridaristizabal@surticosmeticos.com",
-        "apollo_status": "scheduled"
+        "apollo_status": "scheduled",
+        "current_campaign": "",
+        "current_step": "AGENDADO"
       },
       {
         "name": "Edison Ariel Orrego",
         "company": "Ariel y sus fantasias",
         "email": "electronicaayf1@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "Nelson de Jesús Suárez Zuluaga",
         "company": "Distribuidora Surtimos",
         "email": "distribuidorasurtimos@hotmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "FERNANDO RODRIGUEZ ORTIZ",
         "company": "Fernando Rodriguez",
         "email": "fercho28.175@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "EDWIN MAYORGA SALAZAR",
         "company": "Natural power mass",
         "email": "elypublicidad@hotmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "GONZALEZ ENSUNCHO S A S",
         "company": "VARIEDADES ELENA",
         "email": "variedadeselena@hotmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "PERCAL TEXTILES E INSUMOS SAS",
         "company": "Percal textiles",
         "email": "percaltextiles@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "Jose Aldineber Alfonso Torres",
         "company": "El Roble",
         "email": "josealfonso172117@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "Carlos Andres Yaguara",
         "company": "Mega Muebles NA",
         "email": "andresyaguara19@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "FARLEY COBO QUIGUA",
         "company": "El dormilón",
         "email": "basecamacobos@hotmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "RUSSO TEXTILES E INSUMOS S A S",
         "company": "Russo textiles e insumos",
         "email": "russotextiles@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "JOSE LUIS CHAMIZAS VALENZUELA",
         "company": "Solo salas chaval",
         "email": "solosalaschaval@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "ULPIANO ANDRES CARVAJAL ALVARADO",
         "company": "La casa del retablon",
         "email": "lacasadelretablo1999@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "JOHN JAIRO ARCILA HURTADO",
         "company": "J Muebles Arcila",
         "email": "jarcilahurtado@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "HYD MOTORENS SAS",
         "company": "HYD MOTORENS",
         "email": "facturashydmotoren@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "CITY BIKE COLOMBIA SAS",
         "company": "CITY BIKE COLOMBIA",
         "email": "citybikecolombia13@gmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       },
       {
         "name": "GREEN PLANET SCOOTER STORE SAS",
         "company": "GREEN PLANET",
         "email": "carloslopez417@hotmail.com",
-        "apollo_status": "AGENDADO"
+        "apollo_status": "AGENDADO",
+        "current_campaign": "",
+        "current_step": "CLIENTES PLATAM"
       }
     ],
     "RECHAZADOS": []
@@ -699,122 +1605,272 @@
   "recent_activity": [
     {
       "contact": "Jeimmy Oviedo",
+      "account": "Aceites Escenciales Aromas Colombianos",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "Carlos Rendon",
+      "account": "Leche Pal Pelo (Grupo Euro Belleza)",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "Nelsy Yanneth Nieto Ramirez",
+      "account": "Sumicolor",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "Jackeline Ortega",
+      "account": "Megapets",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Surticosméticos",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Fuller Pinto",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Compañia Dsierra S.A.S.",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "CampoReal",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "CARVAL",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Laboratorios Smart S.A.S",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Talsa",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Laboratorios Legrand S.A",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Fábrica de Licores y Alcoholes de Antioquia -EICE-",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Prosalon Distribuciones",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Pintuco",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Alianza Team®",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Abbott Laboratories - Lafrancol S.A.S",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Central Cervecera de Colombia",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Productos Vicky S.A.S",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     },
     {
       "contact": "",
+      "account": "Alimentos Polar",
       "type": "outreach_automatic_email",
       "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Medivelius Farmacéutica",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Levapan",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Megalabs Colombia",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Novacolor S.A.S",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Dispapeles",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "JGB S.A.",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Nutrium S.A.S.",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Gelco International",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Productos Ramo S.A.",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
+      "date": ""
+    },
+    {
+      "contact": "",
+      "account": "Sempertex SAS",
+      "type": "outreach_automatic_email",
+      "status": "scheduled",
+      "sequence": "Sin secuencia",
+      "step": "-",
       "date": ""
     }
   ],

@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platam CRM · Intelligence Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --slate-50: #f8fafc;
+            --slate-100: #f1f5f9;
+            --slate-200: #e2e8f0;
+            --slate-700: #334155;
+            --slate-800: #1e293b;
+            --slate-900: #0f172a;
+            --slate-950: #020617;
+            --teal-400: #2dd4bf;
+            --teal-500: #14b8a6;
+            --teal-600: #0d9488;
+            --amber-400: #fbbf24;
+            --amber-500: #f59e0b;
+            --rose-500: #f43f5e;
+            --emerald-500: #10b981;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--slate-950);
+            color: var(--slate-100);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--slate-800);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .brand-text h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--slate-50);
+        }
+
+        .brand-text p {
+            font-size: 0.85rem;
+            color: var(--slate-400);
+            font-weight: 400;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .sync-status {
+            padding: 0.5rem 1rem;
+            background: var(--slate-900);
+            border: 1px solid var(--slate-800);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--slate-300);
+        }
+
+        .sync-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--emerald-500);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--slate-900);
+            border: 1px solid var(--slate-800);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--slate-50);
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: var(--slate-400);
+            margin-top: 0.25rem;
+        }
+
+        /* KPI Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--slate-900);
+            border: 1px solid var(--slate-800);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .kpi-card:hover {
+            border-color: var(--teal-500);
+        }
+
+        .kpi-label {
+            font-size: 0.8rem;
+            color: var(--slate-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--slate-50);
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-sublabel {
+            font-size: 0.75rem;
+            color: var(--slate-500);
+        }
+
+        .kpi-trend {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: var(--emerald-500);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .kpi-trend.negative {
+            background: var(--rose-500);
+        }
+
+        /* Steps Section */
+        .steps-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .step-row {
+            display: grid;
+            grid-template-columns: 200px 1fr 120px;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem;
+            background: var(--slate-800);
+            border-radius: 8px;
+            border-left: 3px solid var(--teal-500);
+        }
+
+        .step-name {
+            font-weight: 600;
+            color: var(--slate-100);
+            font-size: 0.9rem;
+        }
+
+        .step-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .step-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-bar-label {
+            width: 100px;
+            font-size: 0.75rem;
+            color: var(--slate-400);
+        }
+
+        .step-bar-track {
+            flex: 1;
+            height: 6px;
+            background: var(--slate-700);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .step-bar-fill {
+            height: 100%;
+            background: var(--teal-500);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .step-bar-fill.success { background: var(--emerald-500); }
+        .step-bar-fill.warning { background: var(--amber-500); }
+        .step-bar-fill.danger { background: var(--rose-500); }
+
+        .step-count {
+            font-size: 0.75rem;
+            color: var(--slate-400);
+            min-width: 40px;
+            text-align: right;
+        }
+
+        .step-total {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--slate-200);
+            text-align: right;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--slate-800);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background: var(--teal-500);
+            border-radius: 50%;
+            border: 2px solid var(--slate-950);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-contact {
+            font-weight: 600;
+            color: var(--slate-100);
+            font-size: 0.9rem;
+        }
+
+        .timeline-company {
+            font-size: 0.8rem;
+            color: var(--slate-400);
+            margin-top: 0.15rem;
+        }
+
+        .timeline-date {
+            font-size: 0.75rem;
+            color: var(--slate-500);
+        }
+
+        .timeline-observation {
+            background: var(--slate-800);
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--slate-300);
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-badge.interesado { background: var(--emerald-500); color: white; }
+        .timeline-badge.agendado { background: var(--teal-500); color: white; }
+        .timeline-badge.no-interesado { background: var(--rose-500); color: white; }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--slate-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--slate-800);
+        }
+
+        .data-table td {
+            padding: 1rem 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--slate-800);
+        }
+
+        .data-table tr:hover {
+            background: var(--slate-800);
+        }
+
+        .table-name {
+            font-weight: 600;
+            color: var(--slate-100);
+        }
+
+        .table-email {
+            color: var(--slate-400);
+            font-size: 0.8rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-badge.scheduled { background: var(--teal-600); color: white; }
+        .status-badge.completed { background: var(--emerald-500); color: white; }
+        .status-badge.interesado { background: var(--amber-500); color: white; }
+        .status-badge.agendado { background: var(--emerald-500); color: white; }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--slate-800);
+            margin-bottom: 1.5rem;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--slate-400);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: var(--teal-500);
+            border-bottom-color: var(--teal-500);
+        }
+
+        .tab:hover {
+            color: var(--slate-200);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    
+        .btn-refresh {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-refresh:hover {
+            background: linear-gradient(135deg, var(--teal-400), var(--teal-500));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-refresh:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-refresh.loading .refresh-icon {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .refresh-icon {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s;
+        }
+
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-card-full {
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 1200px) {
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="brand">
+                <div class="brand-logo">P</div>
+                <div class="brand-text">
+                    <h1>Platam CRM</h1>
+                    <p>Sales Intelligence Dashboard</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="refreshBtn" class="btn-refresh" onclick="refreshDashboard()">
+                    <svg class="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"></path>
+                    </svg>
+                    Actualizar Datos
+                </button>
+                <div class="sync-status">
+                    <span class="sync-dot"></span>
+                    <span id="lastUpdate">Sincronizado</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPI Grid -->
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-label">Emails Enviados</div>
+                <div class="kpi-value" id="kpi-emails">--</div>
+                <div class="kpi-sublabel"><span id="kpi-emails-replied">0</span> respuestas</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Llamadas</div>
+                <div class="kpi-value" id="kpi-calls">--</div>
+                <div class="kpi-sublabel"><span id="kpi-calls-answered">0</span> contestadas</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Reuniones</div>
+                <div class="kpi-value" id="kpi-meetings">--</div>
+                <div class="kpi-sublabel">Agendadas este mes</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Tasa de Conversión</div>
+                <div class="kpi-value" id="kpi-conversion">--%</div>
+                <div class="kpi-sublabel">Llamadas → Reuniones</div>
+            </div>
+        </div>
+
+        
+        <!-- Charts Section -->
+        <div class="charts-section">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Funnel de Conversión por Step</div>
+                        <div class="card-subtitle">Progresión de contactos a través de cada etapa</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="conversionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Distribución del Pipeline</div>
+                        <div class="card-subtitle">Contactos por categoría</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="statesChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card chart-card-full">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Métricas de Rendimiento</div>
+                        <div class="card-subtitle">Evolución de KPIs principales</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Column: Steps Analysis -->
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Análisis por Etapa del Outreach</div>
+                            <div class="card-subtitle">Conversión y respuestas por step</div>
+                        </div>
+                    </div>
+                    <div class="steps-grid" id="stepsGrid"></div>
+                </div>
+
+                <!-- Prospects Table -->
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <div class="card-title">Base de Prospectos</div>
+                    </div>
+                    <div class="tabs">
+                        <button class="tab active" onclick="filterTable('ALL')">Todos</button>
+                        <button class="tab" onclick="filterTable('INTERESADOS')">Interesados</button>
+                        <button class="tab" onclick="filterTable('AGENDADOS')">Agendados</button>
+                        <button class="tab" onclick="filterTable('NUEVOS')">Nuevos</button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Contacto</th>
+                                <th>Empresa</th>
+                                <th>Step</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prospectsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Column: Activity Timeline -->
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <div class="card-title">Interacciones Recientes</div>
+                            <div class="card-subtitle">Últimas observaciones registradas</div>
+                        </div>
+                    </div>
+                    <div class="timeline" id="timelineContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dashboardData = null;
+
+        // Load data will be replaced with embedded data
+        function loadData() {
+            dashboardData = {"timestamp": "2026-01-16T20:44:18.366530", "kpis_v2": {"email": {"sent": 397, "replied": 0, "total": 397}, "calls": {"realized": 60, "answered": 31, "meetings": 17}, "linkedin": {"sent": 0, "replied": 0}, "other": {"sent": 0, "replied": 0}}, "steps_metrics": {"LLAMADA 1 (DIA 3)": {"total": 59, "interesado": 19, "agendado": 0, "no_interesado": 2, "no_contesta": 27, "sin_respuesta": 11}, "LLAMADA 2 (DIA 6)": {"total": 1, "interesado": 1, "agendado": 0, "no_interesado": 0, "no_contesta": 0, "sin_respuesta": 0}, "AGENDADO": {"total": 1, "interesado": 0, "agendado": 1, "no_interesado": 0, "no_contesta": 0, "sin_respuesta": 0}, "LINKEDIN (DIA 4)": {"total": 1, "interesado": 0, "agendado": 0, "no_interesado": 0, "no_contesta": 0, "sin_respuesta": 1}, "CLIENTES PLATAM": {"total": 120, "interesado": 19, "agendado": 16, "no_interesado": 8, "no_contesta": 53, "sin_respuesta": 24}}, "observaciones": [{"contacto": "", "empresa": "Suserquia Mazo Tatiana Andrea", "observacion": "SECUENCIA ENVIADA, NO CONTESTA, NO TIENE WHASTAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Grupo de Inversiones L.A Sas", "observacion": "SECUENCIA ENVIADA, NO CONTESTA, NO TIENE WHASTAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Comercializadora El Dorado Taraza S.A.S", "observacion": "ES ODONTOLOGO Y NO LE SIRVE.", "estado": "NO PERFIL", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Comercializadora Internacional Cyen S.A.S", "observacion": "SECUENCIA ENVIADA//CLIENTE INFORMA QUE CAMBIO DE EMPRESA Y AHORITA NO TIENEN NINGUNA INFORMACION, DICE QUE GUARDA MI NUMERO PARA UNA FUTURA OCACION", "estado": "NO INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Sg Milenario S.A.S", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Cz3 S.A.S.", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Grasberg S.A.S.", "observacion": "SECUENCIA ENVIADA: 2:45 QUIERE ESCUCHAR MAS, Y SI LE INTERESA, TODO LO MANEJA DE CONTADO", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Jehm S.A.S.", "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Agustin Cabrera Juan Camilo", "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Diaz Diaz Jorge Mario", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Glinmark S.A.S", "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Invermineralcol S.A.S. en Liquidacion", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Henao Valencia Luis Carlos", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Arcelormittal Projects Colombia S A S", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Cmgold S.A.S.", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Grupo Empresarial La Dolores S.A.S.", "observacion": "SECUENCIA ENVIADA// HABLE CON DIANA, ME PIDE QUE LOS LLAME EL 27 DE ENERO QUE LLEGA LA PERSONA ENCARGADA PARA TOMAR ESAS DECISIONES. ESE DIA ME DICEN SI LES SIRVE O NO. JEFE DE CARTERA", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Maximuebles Jc Sas", "observacion": "SECUENCIA NO ENVIADA, DEISY DESPUES DE LAS 2 PM Y HABLO CON LA PERSONA ENCARGADA PORQ AHORITA ESTAN ALMORZANDO", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "C.I. Grupo Exportador S.A.S", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones La Mayorista E.M S.A.S", "observacion": "SECUENCIA ENVIADA// NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Agroindustrial Los Pinos S.A.S.", "observacion": "SECUENCIA ENVIADA// CLIENTE REPETIDO, EN NUMERO", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "C.I. Rap Projects S.A.S.", "observacion": "SECUENCIA ENVIADA// SOLO LE VENDEN AL EXTRANJERO, NO PUEDEN VENDER ACA EN COLOMBIA", "estado": "NO PERFIL", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Baena Marquez Sergio Ivan", "observacion": "SECUENCIA ENVIADA// NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Mercantil Comercial de Colombia S.A.S.", "observacion": "SECUENCIA ENVIADA, TODO ES DE CONTADO, ME PIDEN Q LES ENVIE OFERTA COMERCIAL...correo enviado el 13 de enero", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Corrales Ceballos Alexander", "observacion": "SECUENCIA ENVIADA//NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Rueda Inversiones S.A.S.", "observacion": "SECUENCIA ENVIADA//SE ENVIA WHASTAPP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Rcv Metales S.A.S.", "observacion": "SECUENCIA ENVIADA// SE ENVIA WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Metaliferas S.A.S.", "observacion": "SECUENCIA ENVIADA//NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Apoyar Gestion Sociedad Por Acciones Simplificada \"En Liquidación\"", "observacion": "SECUENCIA ENVIADA// NO CONTESTA, NO TIENE WHATSAPP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Granados Rivera Jorge Mario", "observacion": "SECUENCIA ENVIADA// NO CONTESTA, NO TIENE WHATSAPP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"", "observacion": "SECUENCIA ENVIADA//SE ENVIA WHASTAPP, SEGUNDO NUMERO REPETIDO CON OTRO CLIENTE", "estado": "", "step": "SIN GESTION", "fecha": "8/1/2026"}], "pipeline": {"NUEVOS": [{"name": "Jackeline Ortega", "company": "Megapets", "email": "megaofertasec@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Compañia Dsierra S.A.S.", "email": "jarenas@dsierra.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "CARVAL", "email": "freddy.martinez@carval.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Laboratorios Legrand S.A", "email": "striana@laboratorioslegrand.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LINKEDIN (DIA 4)"}, {"name": "Sin Nombre", "company": "Fábrica de Licores y Alcoholes de Antioquia -EICE-", "email": "diana.diaz@fla.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Prosalon Distribuciones", "email": "liliana.chamorro@prosalon.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Pintuco", "email": "ricardo.aguirre@pintuco.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alianza Team®", "email": "jguerrero@alianzateam.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Abbott Laboratories - Lafrancol S.A.S", "email": "carlos.riano@abbott.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Central Cervecera de Colombia", "email": "jorge.caicedo@centralcervecera.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alimentos Polar", "email": "laurindo.fernandez@empresas-polar.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Levapan", "email": "jonathan.cuestas@levapan.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Novacolor S.A.S", "email": "felipe@novacolor.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Gelco International", "email": "manuela.pinilla@gelcointernational.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Productos Ramo S.A.", "email": "andres.sanchez@ramo.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Sempertex SAS", "email": "enriquea@sempertex.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Abbott Laboratories - Lafrancol S.A.S", "email": "wenceslao.giraldo@abbott.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Solla S.A.", "email": "mramirez@solla.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Levapan", "email": "luisa.gomez@levapan.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Italcol Cuenta Oficial", "email": "claudialascano@italcol.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Eterna S.A.", "email": "cristian.gonzalez@eternaplc.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Productos Ramo S.A.", "email": "carola.mora@ramo.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Belcorp", "email": "gianellaromero@belcorp.biz", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Coolechera", "email": "canal.institucional@coolechera.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Comercializadora Internacional Eslop Sas", "email": "contabilidad@eslop.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "C.I. Global Multi Commodities S.A.S", "email": "gerencia@glomco.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Osorio Pineda", "company": "Comercializadora Internacional Infinita Prosperidad Minera Sas", "email": "notificacionesagd@antioquiagold.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Landgreen S.A.S.", "email": "saslandgreen@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Ci Jsw Corporation S.A.S", "email": "cumplimiento@jswcorporation.sas", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "C.I. Gestion El Real S.A.S.", "email": "gerencia@gestionelreal.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Moreno Corporation S.A.S.", "email": "morenocorporation2019@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Carmen Sierra", "company": "Comercializadora Internacional Eleven Corporation S.A.S", "email": "gerencia@elevencorporation.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Seguanes Benitez Giovanis Stella", "email": "stellaseguanes@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Atlas Metals S.A.S.", "email": "metalsatlassas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "C.I. Importcaribe S.A.S.", "email": "gerencia.importcaribe@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Sociedad de Comercializacion Internacional de Negocios Naranja y Tecnologia Financiera S.A.S Bic", "email": "contabilidad1@ciorange.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Gjh Elemental S.A.S.", "email": "gjhelemental.sas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones El Malecon S.A.S.", "email": "inversioneselmuelle02@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones La Estrella S&L S.A.S.", "email": "inversioneslaestrellasas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Aristizabal Osorno Mauricio Andres", "email": "maao3182@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Origen Oro Artesanal S.A.S.", "email": "gerencia@origenartesanal.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Orozco Fidel", "email": "compradeorofo@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Suserquia Mazo Tatiana Andrea", "email": "inversioneseye2021@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Grupo de Inversiones L.A Sas", "email": "grupodeinversionesla@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Comercializadora El Dorado Taraza S.A.S", "email": "doradotaraza@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Sg Milenario S.A.S", "email": "contabilidad@sgmilenario.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Cz3 S.A.S.", "email": "inverc23@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Jehm S.A.S.", "email": "inversionesjehm@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Agustin Cabrera Juan Camilo", "email": "juan_kmilo1989@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Diaz Diaz Jorge Mario", "email": "jodiaz21@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Glinmark S.A.S", "email": "admonglinmark@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Invermineralcol S.A.S. en Liquidacion", "email": "invermineralcolsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Henao Valencia Luis Carlos", "email": "djluishenao1512@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Arcelormittal Projects Colombia S A S", "email": "denisse.arias@arcelormittal.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Cmgold S.A.S.", "email": "facturacion@cmgold.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "C.I. Grupo Exportador S.A.S", "email": "info@cigrupoexportador.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones La Mayorista E.M S.A.S", "email": "inversioneslamayorista@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Agroindustrial Los Pinos S.A.S.", "email": "facturacion@lospinossas.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "C.I. Rap Projects S.A.S.", "email": "gerencia@rapprojects.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Baena Marquez Sergio Ivan", "email": "jbf27811@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Corrales Ceballos Alexander", "email": "alexcorce@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Rueda Inversiones S.A.S.", "email": "ruedainversiones@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Rcv Metales S.A.S.", "email": "info@comergroupsas.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Metaliferas S.A.S.", "email": "metaliferas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Apoyar Gestion Sociedad Por Acciones Simplificada \"En Liquidación\"", "email": "jjaimeiral@yahoo.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Granados Rivera Jorge Mario", "email": "granadosyciagold@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"", "email": "grupodiazsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Urrea Garcia Andres Fernando", "company": "Inversiones Osmio S.A.S", "email": "inversionesosmiosas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sebastian Botero Bueno", "company": "Grupo Only Muebles Sas", "email": "contadorjunior@onlymuebles.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Martha Cecilia Mazo Tuberquia", "company": "Mazo Suministros S.A.S", "email": "mazosuministrossas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Diaz Diaz Emilse Isabel", "company": "Diaz Diaz Emilse Isabel", "email": "emisabeldiaz90@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Echeverri Vasquez Jorge Luis", "company": "Echeverri Vasquez Jorge Luis", "email": "jecheverri26@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Luis Hernando Leal Cortes", "company": "Intelligent Mining S.A.S.", "email": "lleal@inmining.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Rodriguez Camargo Carlos Andres", "company": "Hogar Venecia Muebles S.A.S.", "email": "contabilidad@hogarvenecia.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Maria Tomasa Salcedo Betancur", "company": "M & M Metals Gold Sas", "email": "m.metalsgoldsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Bedoya Ramos Jeisfer David", "company": "Bedoya Ramos Jeisfer David", "email": "inversioneshbcaucasia@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Daniel Alfonso Mira Herrera", "company": "Gold Miner D&P S.A.S.", "email": "goldminerdp@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Juan Pablo Uribe Buelvas", "company": "Zlato Group S.A.S.", "email": "zlatogroup@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sierra Caliz Manuel de Jesus", "company": "Sierra Caliz Manuel de Jesus", "email": "sierracalizmanuel.2018@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Tatiana Andrea Suserquia Mazo", "company": "Grupo de Inversiones Tsm S.A.S.", "email": "grupodeinversionestms@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Gonzalez Morales Jairo Andres", "company": "Inferex S.A.S.", "email": "nancy.salazar@inferex.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Arrieta Taborda David", "company": "Arrieta Taborda David", "email": "tabordavid_28@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Jorge Eliecer Duarte Galviz", "company": "Inversiones Dugalviz S.A.S", "email": "jordua27@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Octavio Augusto Lopez Echeverri", "company": "Axxecol S.A.S", "email": "contabilidad@axxecol.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Margarita Ramirez de Trujillo", "company": "Urbana Amc S.A.S", "email": "gerencia@urbana-amc.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sanchez Alvarez Carlos Mario", "company": "Sanchez Alvarez Carlos Mario", "email": "carlossanchez7814@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Fernando Gonzalez Velasquez", "company": "Solutions Group S.A.S.", "email": "info@solutions.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Libia Cristina Delgado Vergara", "company": "Las Huaconas S.A.S.", "email": "lashuaconas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Marquez Tuiran Karina", "company": "Marquez Tuiran Karina", "email": "asesoriasaym1@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Carvajal Ramirez Antonio Jose", "company": "Inversiones Carvajal Ramirez S.A.S.", "email": "carvajalramirezmarcela@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Roche Alvarez Luis Fernando", "company": "Roche Alvarez Luis Fernando", "email": "compradeorokr@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Mayra Julieth Jimenez Montalvo", "company": "Colmex Energy S.A.S.", "email": "mayraj@colmexenergy.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Freddy Andres Mendez Rocha", "company": "M&Mtrading Sas", "email": "m.mtrading2016@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Jhon Freidy Buenaños Gamboa", "company": "Estrategias Manufactureras S.A.S", "email": "asistenteadministrativo@manufacturas.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Elias Orozco Gonzalez", "company": "Odecopack Sas", "email": "eliorozco0101@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Juan Camilo Velasco Hoyos", "company": "Ci Alpha Grupo S.A.S.", "email": "gerencia@alphagrupoci.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Roman Fabio Ramirez Guerron", "company": "Comercializadora Group Sas", "email": "info@comergroupsas.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Alexander Garcia Zuñiga", "company": "Inversiones Rexluz S.A.S", "email": "tallerrexlux@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Jorge Whilem Lozano Mattos", "company": "Inversiones Mejía J.M S.A.S", "email": "whilemlo22@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Alba Lucía Giraldo", "company": "Franco y Giraldo Gold S.A.S.", "email": "gerencia@fyggold.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}], "EN_SECUENCIA": [], "INTERESADOS": [{"name": "Jeimmy Oviedo", "company": "Aceites Escenciales Aromas Colombianos", "email": "jeimmy.oviedo@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Carlos Rendon", "company": "Leche Pal Pelo (Grupo Euro Belleza)", "email": "crendon33@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 2 (DIA 6)"}, {"name": "Nelsy Yanneth Nieto Ramirez", "company": "Sumicolor", "email": "nnieto@sumicolor.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Fuller Pinto", "email": "director.ventas@fullerpinto.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "CampoReal", "email": "lucy.silva@camporeal.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Laboratorios Smart S.A.S", "email": "atorres@laboratoriossmart.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Talsa", "email": "currea@citalsa.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Productos Vicky S.A.S", "email": "pedro.jerez@productoslavictoria.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Medivelius Farmacéutica", "email": "esteban.arteaga@medivelius.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Megalabs Colombia", "email": "mladino@megalabs.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Dispapeles", "email": "oscar.uribe@dispapeles.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "JGB S.A.", "email": "caherrera@jgb.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Nutrium S.A.S.", "email": "camilo.jaramillo@nutrium.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Barbaran Vargas Jose Eduardo", "email": "barbaranvargasj@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Industrias Dofi Sas", "email": "contabilidad2@moduofi.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Chica Mazo Santiago de Jesus", "email": "menalfredo2@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alvarez Correa Wilmer Duban", "email": "duvan28alvarez@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones Armi S.A.S.", "email": "inversionesarmisas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones El Rey J.S Sas", "email": "inversioneselrey12@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alvarez Correa Juan David", "email": "juandalvarez20@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Comercializadora Internacional Cyen S.A.S", "email": "cicyensas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Grasberg S.A.S.", "email": "grasbergsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Grupo Empresarial La Dolores S.A.S.", "email": "administrativo@grupoeld.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Maximuebles Jc Sas", "email": "maximueblescontabilidad@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Mercantil Comercial de Colombia S.A.S.", "email": "mercantilcomercialdecolombia@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Yacid Fernando Orozco Bedoya", "company": "Distribuidora de belleza Guadalupe", "email": "distriguadalupe@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "COMERCIALIZADORA SUPER REY SAS", "company": "SUPER REY DE LOS REMATES", "email": "vanesa.ramireselrey@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Ehilen Arévalo Quintero", "company": "Cacharrería Fredy André", "email": "eilenarevalo787@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "LUZ ADRIANA BUITRAGO ARCILA", "company": "Tienda de belleza adri", "email": "adrianab0412@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "MARTHA PATRICIA ZAMBRANO CLAVIJO", "company": "Distribuidora cabello riso", "email": "alejandra_0088@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ORLANDO JIMENEZ SANCHEZ", "company": "Muebles oddy", "email": "mueblesoddy@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "LUISA FERNANDA ALFEREZ TRIVIÑO", "company": "SURTI SALON'S DISTRIBUIDOR", "email": "luisita_1904@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Carmen Alicia Bastidas España", "company": "Fit Comercial", "email": "alicia.bastidas13e@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "JAMES RIASCOS GONZALEZ", "company": "Muebleria Kairos", "email": "jamesriascosgonzalez@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "SANDRA PATRICIA RODRIGUEZ CORTEZ", "company": "House confort", "email": "patriciacor0324@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "NAZARETH PEÑAFIEL MUÑOZ", "company": "El nogal", "email": "nazitarafa@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ALVARO LONDOÑO ARBELAEZ", "company": "Muebleria kelfer sas", "email": "alvarolondono64@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ROSAURA BATALLA PRADO", "company": "Don Muebles", "email": "donmuebles@hotmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "OSWALDO JOSE NIAMPIRA GUTIERREZ", "company": "DROGUERIAS ULTRA", "email": "niampira31@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ELSY ESMERALDA PULGARIN NARANJO", "company": "Tienda de belleza fmzp", "email": "alexzapata0987@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "BRYAN AGREDO GUTIERREZ", "company": "Colchones cielo azul", "email": "0colchonescieloazul9@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "SUPERMATERIALES AIM SAHAGUN SAS", "company": "SUPERMATERIALES AIM SAHAGUN", "email": "901905809@glerpmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "NELSON MANUEL MARTINEZ SANCHEZ", "company": "ISES MOVILIDAD ELECTRICA", "email": "nm11martinez@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "OLIVA PABON JIMENEZ", "company": "Salas Tapitex", "email": "olivapabon4@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}], "AGENDADOS": [{"name": "Sin Nombre", "company": "Surticosméticos", "email": "ingridaristizabal@surticosmeticos.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "AGENDADO"}, {"name": "Edison Ariel Orrego", "company": "Ariel y sus fantasias", "email": "electronicaayf1@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Nelson de Jesús Suárez Zuluaga", "company": "Distribuidora Surtimos", "email": "distribuidorasurtimos@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "FERNANDO RODRIGUEZ ORTIZ", "company": "Fernando Rodriguez", "email": "fercho28.175@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "EDWIN MAYORGA SALAZAR", "company": "Natural power mass", "email": "elypublicidad@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "GONZALEZ ENSUNCHO S A S", "company": "VARIEDADES ELENA", "email": "variedadeselena@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "PERCAL TEXTILES E INSUMOS SAS", "company": "Percal textiles", "email": "percaltextiles@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Jose Aldineber Alfonso Torres", "company": "El Roble", "email": "josealfonso172117@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Carlos Andres Yaguara", "company": "Mega Muebles NA", "email": "andresyaguara19@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "FARLEY COBO QUIGUA", "company": "El dormilón", "email": "basecamacobos@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "RUSSO TEXTILES E INSUMOS S A S", "company": "Russo textiles e insumos", "email": "russotextiles@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "JOSE LUIS CHAMIZAS VALENZUELA", "company": "Solo salas chaval", "email": "solosalaschaval@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ULPIANO ANDRES CARVAJAL ALVARADO", "company": "La casa del retablon", "email": "lacasadelretablo1999@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "JOHN JAIRO ARCILA HURTADO", "company": "J Muebles Arcila", "email": "jarcilahurtado@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "HYD MOTORENS SAS", "company": "HYD MOTORENS", "email": "facturashydmotoren@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "CITY BIKE COLOMBIA SAS", "company": "CITY BIKE COLOMBIA", "email": "citybikecolombia13@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "GREEN PLANET SCOOTER STORE SAS", "company": "GREEN PLANET", "email": "carloslopez417@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}], "RECHAZADOS": []}, "recent_activity": [{"contact": "Jeimmy Oviedo", "account": "Aceites Escenciales Aromas Colombianos", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "Carlos Rendon", "account": "Leche Pal Pelo (Grupo Euro Belleza)", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "Nelsy Yanneth Nieto Ramirez", "account": "Sumicolor", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "Jackeline Ortega", "account": "Megapets", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Surticosméticos", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Fuller Pinto", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Compañia Dsierra S.A.S.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "CampoReal", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "CARVAL", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Laboratorios Smart S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Talsa", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Laboratorios Legrand S.A", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Fábrica de Licores y Alcoholes de Antioquia -EICE-", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Prosalon Distribuciones", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Pintuco", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Alianza Team®", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Abbott Laboratories - Lafrancol S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Central Cervecera de Colombia", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Productos Vicky S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Alimentos Polar", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Medivelius Farmacéutica", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Levapan", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Megalabs Colombia", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Novacolor S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Dispapeles", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "JGB S.A.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Nutrium S.A.S.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Gelco International", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Productos Ramo S.A.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Sempertex SAS", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}], "counts": {"INTERESADOS": 44, "NUEVOS": 877, "AGENDADOS": 17}};
+            renderDashboard();
+        }, "calls": {"realized": 60, "answered": 31, "meetings": 17}, "linkedin": {"sent": 0, "replied": 0}, "other": {"sent": 0, "replied": 0}}, "steps_metrics": {"LLAMADA 1 (DIA 3)": {"total": 59, "interesado": 19, "agendado": 0, "no_interesado": 2, "no_contesta": 27, "sin_respuesta": 11}, "LLAMADA 2 (DIA 6)": {"total": 1, "interesado": 1, "agendado": 0, "no_interesado": 0, "no_contesta": 0, "sin_respuesta": 0}, "AGENDADO": {"total": 1, "interesado": 0, "agendado": 1, "no_interesado": 0, "no_contesta": 0, "sin_respuesta": 0}, "LINKEDIN (DIA 4)": {"total": 1, "interesado": 0, "agendado": 0, "no_interesado": 0, "no_contesta": 0, "sin_respuesta": 1}, "CLIENTES PLATAM": {"total": 120, "interesado": 19, "agendado": 16, "no_interesado": 8, "no_contesta": 53, "sin_respuesta": 24}}, "observaciones": [{"contacto": "", "empresa": "Suserquia Mazo Tatiana Andrea", "observacion": "SECUENCIA ENVIADA, NO CONTESTA, NO TIENE WHASTAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Grupo de Inversiones L.A Sas", "observacion": "SECUENCIA ENVIADA, NO CONTESTA, NO TIENE WHASTAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Comercializadora El Dorado Taraza S.A.S", "observacion": "ES ODONTOLOGO Y NO LE SIRVE.", "estado": "NO PERFIL", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Comercializadora Internacional Cyen S.A.S", "observacion": "SECUENCIA ENVIADA//CLIENTE INFORMA QUE CAMBIO DE EMPRESA Y AHORITA NO TIENEN NINGUNA INFORMACION, DICE QUE GUARDA MI NUMERO PARA UNA FUTURA OCACION", "estado": "NO INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Sg Milenario S.A.S", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Cz3 S.A.S.", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Grasberg S.A.S.", "observacion": "SECUENCIA ENVIADA: 2:45 QUIERE ESCUCHAR MAS, Y SI LE INTERESA, TODO LO MANEJA DE CONTADO", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Jehm S.A.S.", "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Agustin Cabrera Juan Camilo", "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Diaz Diaz Jorge Mario", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Glinmark S.A.S", "observacion": "SECUENCIA ENVIADA// NUMERO APAGADO, NO TIENE WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Invermineralcol S.A.S. en Liquidacion", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Henao Valencia Luis Carlos", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Arcelormittal Projects Colombia S A S", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Cmgold S.A.S.", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Grupo Empresarial La Dolores S.A.S.", "observacion": "SECUENCIA ENVIADA// HABLE CON DIANA, ME PIDE QUE LOS LLAME EL 27 DE ENERO QUE LLEGA LA PERSONA ENCARGADA PARA TOMAR ESAS DECISIONES. ESE DIA ME DICEN SI LES SIRVE O NO. JEFE DE CARTERA", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Maximuebles Jc Sas", "observacion": "SECUENCIA NO ENVIADA, DEISY DESPUES DE LAS 2 PM Y HABLO CON LA PERSONA ENCARGADA PORQ AHORITA ESTAN ALMORZANDO", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "C.I. Grupo Exportador S.A.S", "observacion": "SECUENCIA ENVIADA// NO CONTESTA SE ENVIA MENSAJE POR WHATSAAP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones La Mayorista E.M S.A.S", "observacion": "SECUENCIA ENVIADA// NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Agroindustrial Los Pinos S.A.S.", "observacion": "SECUENCIA ENVIADA// CLIENTE REPETIDO, EN NUMERO", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "C.I. Rap Projects S.A.S.", "observacion": "SECUENCIA ENVIADA// SOLO LE VENDEN AL EXTRANJERO, NO PUEDEN VENDER ACA EN COLOMBIA", "estado": "NO PERFIL", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Baena Marquez Sergio Ivan", "observacion": "SECUENCIA ENVIADA// NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Mercantil Comercial de Colombia S.A.S.", "observacion": "SECUENCIA ENVIADA, TODO ES DE CONTADO, ME PIDEN Q LES ENVIE OFERTA COMERCIAL...correo enviado el 13 de enero", "estado": "INTERESADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Corrales Ceballos Alexander", "observacion": "SECUENCIA ENVIADA//NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Rueda Inversiones S.A.S.", "observacion": "SECUENCIA ENVIADA//SE ENVIA WHASTAPP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Rcv Metales S.A.S.", "observacion": "SECUENCIA ENVIADA// SE ENVIA WHASTAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Metaliferas S.A.S.", "observacion": "SECUENCIA ENVIADA//NO TIENE WHATSAPP", "estado": "APAGADO", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Apoyar Gestion Sociedad Por Acciones Simplificada \"En Liquidación\"", "observacion": "SECUENCIA ENVIADA// NO CONTESTA, NO TIENE WHATSAPP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Granados Rivera Jorge Mario", "observacion": "SECUENCIA ENVIADA// NO CONTESTA, NO TIENE WHATSAPP", "estado": "NO CONTESTA", "step": "SIN GESTION", "fecha": "8/1/2026"}, {"contacto": "", "empresa": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"", "observacion": "SECUENCIA ENVIADA//SE ENVIA WHASTAPP, SEGUNDO NUMERO REPETIDO CON OTRO CLIENTE", "estado": "", "step": "SIN GESTION", "fecha": "8/1/2026"}], "pipeline": {"NUEVOS": [{"name": "Jackeline Ortega", "company": "Megapets", "email": "megaofertasec@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Compañia Dsierra S.A.S.", "email": "jarenas@dsierra.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "CARVAL", "email": "freddy.martinez@carval.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Laboratorios Legrand S.A", "email": "striana@laboratorioslegrand.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LINKEDIN (DIA 4)"}, {"name": "Sin Nombre", "company": "Fábrica de Licores y Alcoholes de Antioquia -EICE-", "email": "diana.diaz@fla.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Prosalon Distribuciones", "email": "liliana.chamorro@prosalon.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Pintuco", "email": "ricardo.aguirre@pintuco.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alianza Team®", "email": "jguerrero@alianzateam.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Abbott Laboratories - Lafrancol S.A.S", "email": "carlos.riano@abbott.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Central Cervecera de Colombia", "email": "jorge.caicedo@centralcervecera.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alimentos Polar", "email": "laurindo.fernandez@empresas-polar.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Levapan", "email": "jonathan.cuestas@levapan.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Novacolor S.A.S", "email": "felipe@novacolor.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Gelco International", "email": "manuela.pinilla@gelcointernational.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Productos Ramo S.A.", "email": "andres.sanchez@ramo.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Sempertex SAS", "email": "enriquea@sempertex.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Abbott Laboratories - Lafrancol S.A.S", "email": "wenceslao.giraldo@abbott.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Solla S.A.", "email": "mramirez@solla.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Levapan", "email": "luisa.gomez@levapan.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Italcol Cuenta Oficial", "email": "claudialascano@italcol.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Eterna S.A.", "email": "cristian.gonzalez@eternaplc.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Productos Ramo S.A.", "email": "carola.mora@ramo.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Belcorp", "email": "gianellaromero@belcorp.biz", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Coolechera", "email": "canal.institucional@coolechera.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Comercializadora Internacional Eslop Sas", "email": "contabilidad@eslop.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "C.I. Global Multi Commodities S.A.S", "email": "gerencia@glomco.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Osorio Pineda", "company": "Comercializadora Internacional Infinita Prosperidad Minera Sas", "email": "notificacionesagd@antioquiagold.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Landgreen S.A.S.", "email": "saslandgreen@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Ci Jsw Corporation S.A.S", "email": "cumplimiento@jswcorporation.sas", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "C.I. Gestion El Real S.A.S.", "email": "gerencia@gestionelreal.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Moreno Corporation S.A.S.", "email": "morenocorporation2019@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Carmen Sierra", "company": "Comercializadora Internacional Eleven Corporation S.A.S", "email": "gerencia@elevencorporation.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Seguanes Benitez Giovanis Stella", "email": "stellaseguanes@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Atlas Metals S.A.S.", "email": "metalsatlassas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "C.I. Importcaribe S.A.S.", "email": "gerencia.importcaribe@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Sociedad de Comercializacion Internacional de Negocios Naranja y Tecnologia Financiera S.A.S Bic", "email": "contabilidad1@ciorange.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Gjh Elemental S.A.S.", "email": "gjhelemental.sas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones El Malecon S.A.S.", "email": "inversioneselmuelle02@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones La Estrella S&L S.A.S.", "email": "inversioneslaestrellasas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Aristizabal Osorno Mauricio Andres", "email": "maao3182@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Origen Oro Artesanal S.A.S.", "email": "gerencia@origenartesanal.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Orozco Fidel", "email": "compradeorofo@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Suserquia Mazo Tatiana Andrea", "email": "inversioneseye2021@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Grupo de Inversiones L.A Sas", "email": "grupodeinversionesla@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Comercializadora El Dorado Taraza S.A.S", "email": "doradotaraza@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Sg Milenario S.A.S", "email": "contabilidad@sgmilenario.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Cz3 S.A.S.", "email": "inverc23@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Jehm S.A.S.", "email": "inversionesjehm@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Agustin Cabrera Juan Camilo", "email": "juan_kmilo1989@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Diaz Diaz Jorge Mario", "email": "jodiaz21@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Glinmark S.A.S", "email": "admonglinmark@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Invermineralcol S.A.S. en Liquidacion", "email": "invermineralcolsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Henao Valencia Luis Carlos", "email": "djluishenao1512@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Arcelormittal Projects Colombia S A S", "email": "denisse.arias@arcelormittal.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Cmgold S.A.S.", "email": "facturacion@cmgold.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "C.I. Grupo Exportador S.A.S", "email": "info@cigrupoexportador.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones La Mayorista E.M S.A.S", "email": "inversioneslamayorista@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Agroindustrial Los Pinos S.A.S.", "email": "facturacion@lospinossas.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "C.I. Rap Projects S.A.S.", "email": "gerencia@rapprojects.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Baena Marquez Sergio Ivan", "email": "jbf27811@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Corrales Ceballos Alexander", "email": "alexcorce@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Rueda Inversiones S.A.S.", "email": "ruedainversiones@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Rcv Metales S.A.S.", "email": "info@comergroupsas.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Metaliferas S.A.S.", "email": "metaliferas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Apoyar Gestion Sociedad Por Acciones Simplificada \"En Liquidación\"", "email": "jjaimeiral@yahoo.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Granados Rivera Jorge Mario", "email": "granadosyciagold@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Inversiones Grupo Díaz S.A.S \"En Liquidacion\"", "email": "grupodiazsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Urrea Garcia Andres Fernando", "company": "Inversiones Osmio S.A.S", "email": "inversionesosmiosas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sebastian Botero Bueno", "company": "Grupo Only Muebles Sas", "email": "contadorjunior@onlymuebles.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Martha Cecilia Mazo Tuberquia", "company": "Mazo Suministros S.A.S", "email": "mazosuministrossas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Diaz Diaz Emilse Isabel", "company": "Diaz Diaz Emilse Isabel", "email": "emisabeldiaz90@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Echeverri Vasquez Jorge Luis", "company": "Echeverri Vasquez Jorge Luis", "email": "jecheverri26@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Luis Hernando Leal Cortes", "company": "Intelligent Mining S.A.S.", "email": "lleal@inmining.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Rodriguez Camargo Carlos Andres", "company": "Hogar Venecia Muebles S.A.S.", "email": "contabilidad@hogarvenecia.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Maria Tomasa Salcedo Betancur", "company": "M & M Metals Gold Sas", "email": "m.metalsgoldsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Bedoya Ramos Jeisfer David", "company": "Bedoya Ramos Jeisfer David", "email": "inversioneshbcaucasia@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Daniel Alfonso Mira Herrera", "company": "Gold Miner D&P S.A.S.", "email": "goldminerdp@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Juan Pablo Uribe Buelvas", "company": "Zlato Group S.A.S.", "email": "zlatogroup@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sierra Caliz Manuel de Jesus", "company": "Sierra Caliz Manuel de Jesus", "email": "sierracalizmanuel.2018@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Tatiana Andrea Suserquia Mazo", "company": "Grupo de Inversiones Tsm S.A.S.", "email": "grupodeinversionestms@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Gonzalez Morales Jairo Andres", "company": "Inferex S.A.S.", "email": "nancy.salazar@inferex.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Arrieta Taborda David", "company": "Arrieta Taborda David", "email": "tabordavid_28@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Jorge Eliecer Duarte Galviz", "company": "Inversiones Dugalviz S.A.S", "email": "jordua27@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Octavio Augusto Lopez Echeverri", "company": "Axxecol S.A.S", "email": "contabilidad@axxecol.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Margarita Ramirez de Trujillo", "company": "Urbana Amc S.A.S", "email": "gerencia@urbana-amc.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sanchez Alvarez Carlos Mario", "company": "Sanchez Alvarez Carlos Mario", "email": "carlossanchez7814@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Fernando Gonzalez Velasquez", "company": "Solutions Group S.A.S.", "email": "info@solutions.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Libia Cristina Delgado Vergara", "company": "Las Huaconas S.A.S.", "email": "lashuaconas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Marquez Tuiran Karina", "company": "Marquez Tuiran Karina", "email": "asesoriasaym1@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Carvajal Ramirez Antonio Jose", "company": "Inversiones Carvajal Ramirez S.A.S.", "email": "carvajalramirezmarcela@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Roche Alvarez Luis Fernando", "company": "Roche Alvarez Luis Fernando", "email": "compradeorokr@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Mayra Julieth Jimenez Montalvo", "company": "Colmex Energy S.A.S.", "email": "mayraj@colmexenergy.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Freddy Andres Mendez Rocha", "company": "M&Mtrading Sas", "email": "m.mtrading2016@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Jhon Freidy Buenaños Gamboa", "company": "Estrategias Manufactureras S.A.S", "email": "asistenteadministrativo@manufacturas.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Elias Orozco Gonzalez", "company": "Odecopack Sas", "email": "eliorozco0101@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Juan Camilo Velasco Hoyos", "company": "Ci Alpha Grupo S.A.S.", "email": "gerencia@alphagrupoci.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Roman Fabio Ramirez Guerron", "company": "Comercializadora Group Sas", "email": "info@comergroupsas.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Alexander Garcia Zuñiga", "company": "Inversiones Rexluz S.A.S", "email": "tallerrexlux@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Jorge Whilem Lozano Mattos", "company": "Inversiones Mejía J.M S.A.S", "email": "whilemlo22@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Alba Lucía Giraldo", "company": "Franco y Giraldo Gold S.A.S.", "email": "gerencia@fyggold.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}], "EN_SECUENCIA": [], "INTERESADOS": [{"name": "Jeimmy Oviedo", "company": "Aceites Escenciales Aromas Colombianos", "email": "jeimmy.oviedo@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Carlos Rendon", "company": "Leche Pal Pelo (Grupo Euro Belleza)", "email": "crendon33@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 2 (DIA 6)"}, {"name": "Nelsy Yanneth Nieto Ramirez", "company": "Sumicolor", "email": "nnieto@sumicolor.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Fuller Pinto", "email": "director.ventas@fullerpinto.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "CampoReal", "email": "lucy.silva@camporeal.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Laboratorios Smart S.A.S", "email": "atorres@laboratoriossmart.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Talsa", "email": "currea@citalsa.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Productos Vicky S.A.S", "email": "pedro.jerez@productoslavictoria.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Medivelius Farmacéutica", "email": "esteban.arteaga@medivelius.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Megalabs Colombia", "email": "mladino@megalabs.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Dispapeles", "email": "oscar.uribe@dispapeles.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "JGB S.A.", "email": "caherrera@jgb.com.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Nutrium S.A.S.", "email": "camilo.jaramillo@nutrium.co", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Barbaran Vargas Jose Eduardo", "email": "barbaranvargasj@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Industrias Dofi Sas", "email": "contabilidad2@moduofi.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Chica Mazo Santiago de Jesus", "email": "menalfredo2@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alvarez Correa Wilmer Duban", "email": "duvan28alvarez@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones Armi S.A.S.", "email": "inversionesarmisas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Inversiones El Rey J.S Sas", "email": "inversioneselrey12@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Alvarez Correa Juan David", "email": "juandalvarez20@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "LLAMADA 1 (DIA 3)"}, {"name": "Sin Nombre", "company": "Comercializadora Internacional Cyen S.A.S", "email": "cicyensas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Grasberg S.A.S.", "email": "grasbergsas@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Grupo Empresarial La Dolores S.A.S.", "email": "administrativo@grupoeld.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Maximuebles Jc Sas", "email": "maximueblescontabilidad@hotmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Sin Nombre", "company": "Mercantil Comercial de Colombia S.A.S.", "email": "mercantilcomercialdecolombia@gmail.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "SIN GESTION"}, {"name": "Yacid Fernando Orozco Bedoya", "company": "Distribuidora de belleza Guadalupe", "email": "distriguadalupe@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "COMERCIALIZADORA SUPER REY SAS", "company": "SUPER REY DE LOS REMATES", "email": "vanesa.ramireselrey@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Ehilen Arévalo Quintero", "company": "Cacharrería Fredy André", "email": "eilenarevalo787@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "LUZ ADRIANA BUITRAGO ARCILA", "company": "Tienda de belleza adri", "email": "adrianab0412@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "MARTHA PATRICIA ZAMBRANO CLAVIJO", "company": "Distribuidora cabello riso", "email": "alejandra_0088@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ORLANDO JIMENEZ SANCHEZ", "company": "Muebles oddy", "email": "mueblesoddy@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "LUISA FERNANDA ALFEREZ TRIVIÑO", "company": "SURTI SALON'S DISTRIBUIDOR", "email": "luisita_1904@hotmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Carmen Alicia Bastidas España", "company": "Fit Comercial", "email": "alicia.bastidas13e@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "JAMES RIASCOS GONZALEZ", "company": "Muebleria Kairos", "email": "jamesriascosgonzalez@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "SANDRA PATRICIA RODRIGUEZ CORTEZ", "company": "House confort", "email": "patriciacor0324@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "NAZARETH PEÑAFIEL MUÑOZ", "company": "El nogal", "email": "nazitarafa@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ALVARO LONDOÑO ARBELAEZ", "company": "Muebleria kelfer sas", "email": "alvarolondono64@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ROSAURA BATALLA PRADO", "company": "Don Muebles", "email": "donmuebles@hotmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "OSWALDO JOSE NIAMPIRA GUTIERREZ", "company": "DROGUERIAS ULTRA", "email": "niampira31@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ELSY ESMERALDA PULGARIN NARANJO", "company": "Tienda de belleza fmzp", "email": "alexzapata0987@gmail.com", "apollo_status": "NO INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "BRYAN AGREDO GUTIERREZ", "company": "Colchones cielo azul", "email": "0colchonescieloazul9@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "SUPERMATERIALES AIM SAHAGUN SAS", "company": "SUPERMATERIALES AIM SAHAGUN", "email": "901905809@glerpmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "NELSON MANUEL MARTINEZ SANCHEZ", "company": "ISES MOVILIDAD ELECTRICA", "email": "nm11martinez@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "OLIVA PABON JIMENEZ", "company": "Salas Tapitex", "email": "olivapabon4@gmail.com", "apollo_status": "INTERESADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}], "AGENDADOS": [{"name": "Sin Nombre", "company": "Surticosméticos", "email": "ingridaristizabal@surticosmeticos.com", "apollo_status": "scheduled", "current_campaign": "", "current_step": "AGENDADO"}, {"name": "Edison Ariel Orrego", "company": "Ariel y sus fantasias", "email": "electronicaayf1@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Nelson de Jesús Suárez Zuluaga", "company": "Distribuidora Surtimos", "email": "distribuidorasurtimos@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "FERNANDO RODRIGUEZ ORTIZ", "company": "Fernando Rodriguez", "email": "fercho28.175@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "EDWIN MAYORGA SALAZAR", "company": "Natural power mass", "email": "elypublicidad@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "GONZALEZ ENSUNCHO S A S", "company": "VARIEDADES ELENA", "email": "variedadeselena@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "PERCAL TEXTILES E INSUMOS SAS", "company": "Percal textiles", "email": "percaltextiles@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Jose Aldineber Alfonso Torres", "company": "El Roble", "email": "josealfonso172117@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "Carlos Andres Yaguara", "company": "Mega Muebles NA", "email": "andresyaguara19@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "FARLEY COBO QUIGUA", "company": "El dormilón", "email": "basecamacobos@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "RUSSO TEXTILES E INSUMOS S A S", "company": "Russo textiles e insumos", "email": "russotextiles@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "JOSE LUIS CHAMIZAS VALENZUELA", "company": "Solo salas chaval", "email": "solosalaschaval@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "ULPIANO ANDRES CARVAJAL ALVARADO", "company": "La casa del retablon", "email": "lacasadelretablo1999@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "JOHN JAIRO ARCILA HURTADO", "company": "J Muebles Arcila", "email": "jarcilahurtado@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "HYD MOTORENS SAS", "company": "HYD MOTORENS", "email": "facturashydmotoren@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "CITY BIKE COLOMBIA SAS", "company": "CITY BIKE COLOMBIA", "email": "citybikecolombia13@gmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}, {"name": "GREEN PLANET SCOOTER STORE SAS", "company": "GREEN PLANET", "email": "carloslopez417@hotmail.com", "apollo_status": "AGENDADO", "current_campaign": "", "current_step": "CLIENTES PLATAM"}], "RECHAZADOS": []}, "recent_activity": [{"contact": "Jeimmy Oviedo", "account": "Aceites Escenciales Aromas Colombianos", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "Carlos Rendon", "account": "Leche Pal Pelo (Grupo Euro Belleza)", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "Nelsy Yanneth Nieto Ramirez", "account": "Sumicolor", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "Jackeline Ortega", "account": "Megapets", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Surticosméticos", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Fuller Pinto", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Compañia Dsierra S.A.S.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "CampoReal", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "CARVAL", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Laboratorios Smart S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Talsa", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Laboratorios Legrand S.A", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Fábrica de Licores y Alcoholes de Antioquia -EICE-", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Prosalon Distribuciones", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Pintuco", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Alianza Team®", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Abbott Laboratories - Lafrancol S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Central Cervecera de Colombia", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Productos Vicky S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Alimentos Polar", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Medivelius Farmacéutica", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Levapan", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Megalabs Colombia", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Novacolor S.A.S", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Dispapeles", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "JGB S.A.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Nutrium S.A.S.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Gelco International", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Productos Ramo S.A.", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}, {"contact": "", "account": "Sempertex SAS", "type": "outreach_automatic_email", "status": "scheduled", "sequence": "Sin secuencia", "step": "-", "date": ""}], "counts": {"INTERESADOS": 44, "NUEVOS": 877, "AGENDADOS": 17}};
+            renderDashboard();
+        }
+
+        function renderDashboard() {
+            if (!dashboardData) return;
+
+            if (!dashboardData) return;
+
+            // KPIs
+            const kpis = dashboardData.kpis_v2;
+            document.getElementById('kpi-emails').textContent = kpis.email.sent;
+            document.getElementById('kpi-emails-replied').textContent = kpis.email.replied;
+            document.getElementById('kpi-calls').textContent = kpis.calls.realized;
+            document.getElementById('kpi-calls-answered').textContent = kpis.calls.answered;
+            document.getElementById('kpi-meetings').textContent = kpis.calls.meetings;
+
+            const conversion = kpis.calls.realized > 0
+                ? Math.round((kpis.calls.meetings / kpis.calls.realized) * 100)
+                : 0;
+            document.getElementById('kpi-conversion').textContent = conversion + '%';
+
+            // Last update
+            const lastUpdate = new Date(dashboardData.timestamp);
+            document.getElementById('lastUpdate').textContent =
+                'Hace ' + Math.floor((new Date() - lastUpdate) / 60000) + ' min';
+
+            // Render Steps
+            renderSteps();
+
+            // Render Timeline
+            renderTimeline();
+
+            // Render Table
+            renderTable('ALL');
+            renderCharts();
+        }
+
+        function renderSteps() {
+            const container = document.getElementById('stepsGrid');
+            container.innerHTML = '';
+
+            const steps = dashboardData.steps_metrics || {};
+
+            Object.entries(steps).forEach(([stepName, metrics]) => {
+                const total = metrics.total;
+                if (total === 0) return;
+
+                const div = document.createElement('div');
+                div.className = 'step-row';
+
+                const interesadoPct = (metrics.interesado / total) * 100;
+                const agendadoPct = (metrics.agendado / total) * 100;
+                const noInteresadoPct = (metrics.no_interesado / total) * 100;
+                const noContestaPct = (metrics.no_contesta / total) * 100;
+
+                div.innerHTML = `
+                    <div class="step-name">${stepName}</div>
+                    <div class="step-bars">
+                        <div class="step-bar">
+                            <div class="step-bar-label">Interesados</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill success" style="width: ${interesadoPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.interesado}</div>
+                        </div>
+                        <div class="step-bar">
+                            <div class="step-bar-label">Agendados</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill success" style="width: ${agendadoPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.agendado}</div>
+                        </div>
+                        <div class="step-bar">
+                            <div class="step-bar-label">No interesados</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill danger" style="width: ${noInteresadoPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.no_interesado}</div>
+                        </div>
+                        <div class="step-bar">
+                            <div class="step-bar-label">No contesta</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill warning" style="width: ${noContestaPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.no_contesta}</div>
+                        </div>
+                    </div>
+                    <div class="step-total">${total}</div>
+                `;
+
+                container.appendChild(div);
+            });
+        }
+
+        function renderTimeline() {
+            const container = document.getElementById('timelineContainer');
+            container.innerHTML = '';
+
+            const observaciones = dashboardData.observaciones || [];
+
+            observaciones.slice(0, 15).forEach(obs => {
+                const div = document.createElement('div');
+                div.className = 'timeline-item';
+
+                const badgeClass = obs.estado.toLowerCase().includes('interesado') ? 'interesado' :
+                                  obs.estado.toLowerCase().includes('agendado') ? 'agendado' :
+                                  obs.estado.toLowerCase().includes('no') ? 'no-interesado' : '';
+
+                div.innerHTML = `
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-contact">${obs.contacto}</div>
+                            <div class="timeline-company">${obs.empresa}</div>
+                        </div>
+                        <div class="timeline-date">${obs.fecha}</div>
+                    </div>
+                    <div class="timeline-observation">${obs.observacion.substring(0, 200)}${obs.observacion.length > 200 ? '...' : ''}</div>
+                    ${obs.estado ? `<span class="timeline-badge ${badgeClass}">${obs.estado}</span>` : ''}
+                    ${obs.step ? `<span class="timeline-badge" style="background: var(--slate-700); color: var(--slate-300); margin-left: 0.5rem;">${obs.step}</span>` : ''}
+                `;
+
+                container.appendChild(div);
+            });
+        }
+
+        function renderTable(filter) {
+            const tbody = document.getElementById('prospectsTable');
+            tbody.innerHTML = '';
+
+            let contacts = [];
+            if (filter === 'ALL') {
+                Object.values(dashboardData.pipeline).forEach(arr => {
+                    contacts = contacts.concat(arr);
+                });
+            } else {
+                contacts = dashboardData.pipeline[filter] || [];
+            }
+
+            contacts.slice(0, 50).forEach(contact => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>
+                        <div class="table-name">${contact.name}</div>
+                        <div class="table-email">${contact.email}</div>
+                    </td>
+                    <td>${contact.company || '-'}</td>
+                    <td>${contact.current_step || '-'}</td>
+                    <td><span class="status-badge ${(contact.apollo_status || '').toLowerCase()}">${contact.apollo_status || 'Sin estado'}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterTable(category) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTable(category);
+        }
+
+        
+        let conversionChart = null;
+        let statesChart = null;
+        let trendChart = null;
+
+        async function refreshDashboard() {
+            const btn = document.getElementById('refreshBtn');
+            const icon = btn.querySelector('.refresh-icon');
+            
+            btn.disabled = true;
+            btn.classList.add('loading');
+            btn.innerHTML = '<svg class="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"></path></svg> Actualizando...';
+
+            try {
+                const response = await fetch('/api/refresh', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    dashboardData = result.data;
+                    renderDashboard();
+                    
+                    btn.innerHTML = '<svg class="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg> Actualizado!';
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = '<svg class="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"></path></svg> Actualizar Datos';
+                        btn.disabled = false;
+                        btn.classList.remove('loading');
+                    }, 2000);
+                } else {
+                    throw new Error(result.error || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                btn.innerHTML = '<svg class="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg> Error - Reintentar';
+                
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"></path></svg> Actualizar Datos';
+                    btn.disabled = false;
+                    btn.classList.remove('loading');
+                }, 3000);
+            }
+        }
+
+        function renderCharts() {
+            renderConversionFunnel();
+            renderStatesDistribution();
+            renderTrendChart();
+        }
+
+        function renderConversionFunnel() {
+            const ctx = document.getElementById('conversionChart');
+            if (!ctx) return;
+
+            if (conversionChart) conversionChart.destroy();
+
+            const steps = dashboardData.steps_metrics || {};
+            const labels = [];
+            const interesados = [];
+            const agendados = [];
+            const totales = [];
+
+            Object.entries(steps).forEach(([name, metrics]) => {
+                if (metrics.total > 5) {
+                    labels.push(name);
+                    totales.push(metrics.total);
+                    interesados.push(metrics.interesado);
+                    agendados.push(metrics.agendado);
+                }
+            });
+
+            conversionChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Total Contactos',
+                            data: totales,
+                            backgroundColor: 'rgba(100, 116, 139, 0.6)',
+                            borderColor: 'rgba(100, 116, 139, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Interesados',
+                            data: interesados,
+                            backgroundColor: 'rgba(16, 185, 129, 0.6)',
+                            borderColor: 'rgba(16, 185, 129, 1)',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Agendados',
+                            data: agendados,
+                            backgroundColor: 'rgba(20, 184, 166, 0.6)',
+                            borderColor: 'rgba(20, 184, 166, 1)',
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#f1f5f9' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderStatesDistribution() {
+            const ctx = document.getElementById('statesChart');
+            if (!ctx) return;
+
+            if (statesChart) statesChart.destroy();
+
+            const counts = dashboardData.counts || {};
+
+            statesChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(counts),
+                    datasets: [{
+                        data: Object.values(counts),
+                        backgroundColor: [
+                            'rgba(20, 184, 166, 0.8)',
+                            'rgba(251, 191, 36, 0.8)',
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(244, 63, 94, 0.8)',
+                            'rgba(148, 163, 184, 0.8)'
+                        ],
+                        borderColor: '#0f172a',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { color: '#f1f5f9', padding: 15 }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderTrendChart() {
+            const ctx = document.getElementById('trendChart');
+            if (!ctx) return;
+
+            if (trendChart) trendChart.destroy();
+
+            const kpis = dashboardData.kpis_v2;
+
+            const data = [
+                { label: 'Emails Enviados', value: kpis.email.sent, max: kpis.email.sent },
+                { label: 'Llamadas Realizadas', value: kpis.calls.realized, max: 100 },
+                { label: 'Llamadas Contestadas', value: kpis.calls.answered, max: 100 },
+                { label: 'Reuniones Agendadas', value: kpis.calls.meetings, max: 50 }
+            ];
+
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.label),
+                    datasets: [{
+                        label: 'Progreso',
+                        data: data.map(d => d.value),
+                        borderColor: 'rgba(20, 184, 166, 1)',
+                        backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+        }
+
+
+        
+console.log('=== DASHBOARD DEBUG ===');
+console.log('1. Script cargado');
+
+window.addEventListener('DOMContentLoaded', function() {
+    console.log('2. DOM ready');
+    console.log('3. dashboardData exists?', typeof dashboardData !== 'undefined');
+    if (typeof dashboardData !== 'undefined' && dashboardData) {
+        console.log('4. dashboardData:', dashboardData);
+        console.log('5. KPIs:', dashboardData.kpis_v2);
+    } else {
+        console.error('ERROR: dashboardData is undefined!');
+    }
+});
+
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
