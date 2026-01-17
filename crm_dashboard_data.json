@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-01-16T16:55:01.424679",
+  "timestamp": "2026-01-16T17:07:50.232726",
   "kpis_principales": {
     "Total Contactos": 938,
     "Con Email": 938,
     "Con Teléfono": 931,
-    "En Apollo": 165
+    "En Apollo": 0
   },
   "estados": {
     "NO CONTESTA": 80,
@@ -31,12 +31,7 @@
     "AGENDADO": 1,
     "LINKEDIN (DIA 4)": 1
   },
-  "campanas": {
-    "Pilot – Día 5 – Texto plano": 39,
-    "Pilot – Día 4 – Texto plano": 30,
-    "Pilot – Día 8– Texto plano": 30,
-    "Pilot – Día 2 – Texto plano": 25
-  },
+  "campanas": {},
   "fuentes": {
     "EMIS": 780,
     "CLIENTES PLATAM PAY": 120,

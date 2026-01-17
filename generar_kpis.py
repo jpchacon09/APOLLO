@@ -26,7 +26,7 @@ def analizar_crm():
         'total_contactos': len(contactos),
         'con_email': sum(1 for c in contactos if c.get('EMAIL_LIMPIO', '').strip()),
         'con_telefono': sum(1 for c in contactos if c.get('CELULAR1', '').strip()),
-        'con_apollo_info': sum(1 for c in contactos if c.get('apollo_sequence_id', '').strip()),
+        'con_apollo_info': sum(1 for c in contactos if c.get('apollo_last_message_id', '').strip() or c.get('campaña', '').strip()),
     }
 
     # ========== ANÁLISIS POR ESTADO ==========
@@ -39,7 +39,7 @@ def analizar_crm():
     steps = Counter(c.get('STEP', 'SIN STEP').strip().upper() for c in contactos if c.get('STEP'))
 
     # ========== ANÁLISIS POR CAMPAÑA ==========
-    campanas = Counter(c.get('campaña', 'SIN CAMPAÑA').strip() for c in contactos if c.get('campaña'))
+    campanas = Counter(c.get('campaña', 'SIN CAMPAÑA').strip() for c in contactos if c.get('campaña') and c.get('campaña').strip() != 'SIN CAMPAÑA')
 
     # ========== ANÁLISIS POR FUENTE ==========
     fuentes = Counter(c.get('Fuente', 'SIN FUENTE').strip() for c in contactos if c.get('Fuente'))
