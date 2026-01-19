@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platam CRM · Professional Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --slate-950: #020617;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-500: #64748b;
+            --slate-400: #94a3b8;
+            --slate-300: #cbd5e1;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --teal-600: #0d9488;
+            --teal-500: #14b8a6;
+            --teal-400: #2dd4bf;
+            --emerald-500: #10b981;
+            --amber-500: #f59e0b;
+            --rose-500: #f43f5e;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--slate-950);
+            color: var(--slate-100);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--slate-800);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .brand-text h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--slate-50);
+        }
+
+        .brand-text p {
+            font-size: 0.9rem;
+            color: var(--slate-400);
+            margin-top: 0.2rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .sync-status {
+            padding: 0.6rem 1rem;
+            background: var(--slate-900);
+            border: 1px solid var(--slate-800);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--slate-300);
+        }
+
+        .sync-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--emerald-500);
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .sync-dot.syncing {
+            background: var(--amber-500);
+            animation: pulse 0.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .btn-refresh {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--teal-500), var(--teal-600));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .btn-refresh:hover:not(:disabled) {
+            background: linear-gradient(135deg, var(--teal-400), var(--teal-500));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+        }
+
+        .btn-refresh:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        /* KPIs */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--slate-900);
+            border: 1px solid var(--slate-800);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .kpi-card:hover {
+            border-color: var(--teal-500);
+        }
+
+        .kpi-label {
+            font-size: 0.8rem;
+            color: var(--slate-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-value {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--slate-50);
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-sublabel {
+            font-size: 0.8rem;
+            color: var(--slate-500);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--slate-900);
+            border: 1px solid var(--slate-800);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--slate-50);
+            margin-bottom: 0.25rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: var(--slate-400);
+        }
+
+        /* Charts */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Steps */
+        .steps-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .step-row {
+            display: grid;
+            grid-template-columns: 200px 1fr 100px;
+            gap: 1rem;
+            align-items: center;
+            padding: 1.2rem;
+            background: var(--slate-800);
+            border-radius: 8px;
+            border-left: 3px solid var(--teal-500);
+        }
+
+        .step-name {
+            font-weight: 600;
+            color: var(--slate-100);
+            font-size: 0.9rem;
+        }
+
+        .step-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .step-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-bar-label {
+            width: 100px;
+            font-size: 0.75rem;
+            color: var(--slate-400);
+        }
+
+        .step-bar-track {
+            flex: 1;
+            height: 6px;
+            background: var(--slate-700);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .step-bar-fill {
+            height: 100%;
+            background: var(--teal-500);
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        .step-bar-fill.success {
+            background: var(--emerald-500);
+        }
+
+        .step-bar-fill.warning {
+            background: var(--amber-500);
+        }
+
+        .step-bar-fill.danger {
+            background: var(--rose-500);
+        }
+
+        .step-count {
+            font-size: 0.75rem;
+            color: var(--slate-400);
+            min-width: 35px;
+            text-align: right;
+        }
+
+        .step-total {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--slate-200);
+            text-align: right;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--slate-800);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background: var(--teal-500);
+            border-radius: 50%;
+            border: 2px solid var(--slate-950);
+        }
+
+        .timeline-contact {
+            font-weight: 600;
+            color: var(--slate-100);
+            font-size: 0.9rem;
+        }
+
+        .timeline-company {
+            font-size: 0.8rem;
+            color: var(--slate-400);
+            margin-top: 0.1rem;
+        }
+
+        .timeline-observation {
+            background: var(--slate-800);
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--slate-300);
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+
+        .timeline-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .timeline-badge.interesado {
+            background: var(--emerald-500);
+            color: white;
+        }
+
+        .timeline-badge.agendado {
+            background: var(--teal-500);
+            color: white;
+        }
+
+        .timeline-badge.no-interesado {
+            background: var(--rose-500);
+            color: white;
+        }
+
+        .timeline-badge.step {
+            background: var(--slate-700);
+            color: var(--slate-300);
+        }
+
+        /* Table */
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--slate-800);
+            margin-bottom: 1.5rem;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--slate-400);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: var(--teal-500);
+            border-bottom-color: var(--teal-500);
+        }
+
+        .tab:hover {
+            color: var(--slate-200);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--slate-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--slate-800);
+        }
+
+        .data-table td {
+            padding: 1rem 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--slate-800);
+        }
+
+        .data-table tr:hover {
+            background: var(--slate-800);
+        }
+
+        .table-name {
+            font-weight: 600;
+            color: var(--slate-100);
+        }
+
+        .table-email {
+            color: var(--slate-400);
+            font-size: 0.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-badge.scheduled {
+            background: var(--teal-600);
+            color: white;
+        }
+
+        .status-badge.interesado {
+            background: var(--amber-500);
+            color: white;
+        }
+
+        .status-badge.agendado {
+            background: var(--emerald-500);
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="brand">
+                <div class="brand-logo">P</div>
+                <div class="brand-text">
+                    <h1>Platam CRM</h1>
+                    <p>Sales Intelligence Dashboard</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-refresh" id="btnRefresh" onclick="refreshData()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15">
+                        </path>
+                    </svg>
+                    <span id="btnText">Actualizar Datos</span>
+                </button>
+                <div class="sync-status">
+                    <span class="sync-dot" id="syncDot"></span>
+                    <span id="lastUpdate">Cargando...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-label">Emails Enviados</div>
+                <div class="kpi-value" id="kpi-emails">0</div>
+                <div class="kpi-sublabel"><span id="kpi-emails-replied">0</span> respuestas</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Llamadas</div>
+                <div class="kpi-value" id="kpi-calls">0</div>
+                <div class="kpi-sublabel"><span id="kpi-calls-answered">0</span> contestadas</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Reuniones</div>
+                <div class="kpi-value" id="kpi-meetings">0</div>
+                <div class="kpi-sublabel">Agendadas</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Conversión</div>
+                <div class="kpi-value" id="kpi-conversion">0%</div>
+                <div class="kpi-sublabel">Llamadas → Reuniones</div>
+            </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Funnel de Conversión</div>
+                    <div class="card-subtitle">Progresión por step</div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="funnelChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Distribución del Pipeline</div>
+                    <div class="card-subtitle">Contactos por categoría</div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pipelineChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-grid">
+            <!-- Steps Analysis -->
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Análisis por Etapa del Outreach</div>
+                        <div class="card-subtitle">Conversión y respuestas por step</div>
+                    </div>
+                    <div class="steps-grid" id="stepsGrid"></div>
+                </div>
+
+                <!-- Prospects Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Base de Prospectos</div>
+                    </div>
+                    <div class="tabs">
+                        <button class="tab active" onclick="filterTable('ALL')">Todos</button>
+                        <button class="tab" onclick="filterTable('INTERESADOS')">Interesados</button>
+                        <button class="tab" onclick="filterTable('AGENDADOS')">Agendados</button>
+                        <button class="tab" onclick="filterTable('NUEVOS')">Nuevos</button>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Contacto</th>
+                                <th>Empresa</th>
+                                <th>Step</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="prospectsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Interacciones Recientes</div>
+                        <div class="card-subtitle">Últimas observaciones</div>
+                    </div>
+                    <div class="timeline" id="timelineContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Detectar automáticamente si estamos en producción o local
+        const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+        const API_URL = isProduction ? '/api' : 'http://localhost:8000/api';
+        
+        console.log('Environment:', isProduction ? 'Production' : 'Development');
+        console.log('API URL:', API_URL);
+        
+        let dashboardData = null;
+        let funnelChart = null;
+        let pipelineChart = null;
+
+        // Cargar datos al inicio
+        async function loadData() {
+            try {
+                const response = await fetch(`${API_URL}/dashboard/data`);
+                dashboardData = await response.json();
+                renderDashboard();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('lastUpdate').textContent = 'Error al cargar';
+            }
+        }
+
+        // Actualizar datos
+        async function refreshData() {
+            const btn = document.getElementById('btnRefresh');
+            const btnText = document.getElementById('btnText');
+            const dot = document.getElementById('syncDot');
+
+            btn.disabled = true;
+            btnText.textContent = 'Actualizando...';
+            dot.classList.add('syncing');
+
+            try {
+                // Regenerar datos
+                await fetch(`${API_URL}/data/regenerate`, { method: 'POST' });
+
+                // Recargar
+                await loadData();
+
+                btnText.textContent = 'Actualizado ✓';
+                setTimeout(() => {
+                    btnText.textContent = 'Actualizar Datos';
+                }, 2000);
+            } catch (error) {
+                console.error('Error refreshing:', error);
+                btnText.textContent = 'Error';
+            } finally {
+                btn.disabled = false;
+                dot.classList.remove('syncing');
+            }
+        }
+
+        // Renderizar dashboard
+        function renderDashboard() {
+            const kpis = dashboardData.kpis_v2;
+
+            // KPIs
+            document.getElementById('kpi-emails').textContent = kpis.email.sent;
+            document.getElementById('kpi-emails-replied').textContent = kpis.email.replied;
+            document.getElementById('kpi-calls').textContent = kpis.calls.realized;
+            document.getElementById('kpi-calls-answered').textContent = kpis.calls.answered;
+            document.getElementById('kpi-meetings').textContent = kpis.calls.meetings;
+
+            const conversion = kpis.calls.realized > 0
+                ? Math.round((kpis.calls.meetings / kpis.calls.realized) * 100)
+                : 0;
+            document.getElementById('kpi-conversion').textContent = conversion + '%';
+
+            // Last update
+            const lastUpdate = new Date(dashboardData.timestamp);
+            const minutesAgo = Math.floor((new Date() - lastUpdate) / 60000);
+            document.getElementById('lastUpdate').textContent = minutesAgo < 1 ? 'Ahora' : `Hace ${minutesAgo} min`;
+
+            // Render components
+            renderCharts();
+            renderSteps();
+            renderTimeline();
+            renderTable('ALL');
+        }
+
+        function renderCharts() {
+            // Funnel Chart
+            const steps = dashboardData.steps_metrics || {};
+            const funnelLabels = [];
+            const funnelInteresados = [];
+            const funnelAgendados = [];
+
+            Object.entries(steps).forEach(([name, metrics]) => {
+                if (metrics.total > 5) {
+                    funnelLabels.push(name);
+                    funnelInteresados.push(metrics.interesado);
+                    funnelAgendados.push(metrics.agendado);
+                }
+            });
+
+            if (funnelChart) funnelChart.destroy();
+            funnelChart = new Chart(document.getElementById('funnelChart'), {
+                type: 'bar',
+                data: {
+                    labels: funnelLabels,
+                    datasets: [
+                        {
+                            label: 'Interesados',
+                            data: funnelInteresados,
+                            backgroundColor: '#10b981'
+                        },
+                        {
+                            label: 'Agendados',
+                            data: funnelAgendados,
+                            backgroundColor: '#14b8a6'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { labels: { color: '#f1f5f9' } }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.05)' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+
+            // Pipeline Chart
+            const counts = dashboardData.counts || {};
+            if (pipelineChart) pipelineChart.destroy();
+            pipelineChart = new Chart(document.getElementById('pipelineChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(counts),
+                    datasets: [{
+                        data: Object.values(counts),
+                        backgroundColor: ['#14b8a6', '#f59e0b', '#10b981', '#ef4444', '#94a3b8'],
+                        borderColor: '#0f172a',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { color: '#f1f5f9', padding: 15 }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderSteps() {
+            const container = document.getElementById('stepsGrid');
+            container.innerHTML = '';
+            const steps = dashboardData.steps_metrics || {};
+
+            Object.entries(steps).forEach(([stepName, metrics]) => {
+                const total = metrics.total;
+                if (total === 0) return;
+
+                const div = document.createElement('div');
+                div.className = 'step-row';
+
+                const interesadoPct = (metrics.interesado / total) * 100;
+                const agendadoPct = (metrics.agendado / total) * 100;
+                const noInteresadoPct = (metrics.no_interesado / total) * 100;
+                const noContestaPct = (metrics.no_contesta / total) * 100;
+
+                div.innerHTML = `
+                    <div class="step-name">${stepName}</div>
+                    <div class="step-bars">
+                        <div class="step-bar">
+                            <div class="step-bar-label">Interesados</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill success" style="width: ${interesadoPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.interesado}</div>
+                        </div>
+                        <div class="step-bar">
+                            <div class="step-bar-label">Agendados</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill success" style="width: ${agendadoPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.agendado}</div>
+                        </div>
+                        <div class="step-bar">
+                            <div class="step-bar-label">No interesados</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill danger" style="width: ${noInteresadoPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.no_interesado}</div>
+                        </div>
+                        <div class="step-bar">
+                            <div class="step-bar-label">No contesta</div>
+                            <div class="step-bar-track">
+                                <div class="step-bar-fill warning" style="width: ${noContestaPct}%"></div>
+                            </div>
+                            <div class="step-count">${metrics.no_contesta}</div>
+                        </div>
+                    </div>
+                    <div class="step-total">${total}</div>
+                `;
+
+                container.appendChild(div);
+            });
+        }
+
+        function renderTimeline() {
+            const container = document.getElementById('timelineContainer');
+            container.innerHTML = '';
+            const observaciones = dashboardData.observaciones || [];
+
+            observaciones.slice(0, 15).forEach(obs => {
+                const div = document.createElement('div');
+                div.className = 'timeline-item';
+
+                const badgeClass = obs.estado.toLowerCase().includes('interesado') ? 'interesado' :
+                    obs.estado.toLowerCase().includes('agendado') ? 'agendado' :
+                        obs.estado.toLowerCase().includes('no') ? 'no-interesado' : '';
+
+                div.innerHTML = `
+                    <div class="timeline-contact">${obs.contacto || 'Sin nombre'}</div>
+                    <div class="timeline-company">${obs.empresa}</div>
+                    <div class="timeline-observation">${obs.observacion.substring(0, 180)}${obs.observacion.length > 180 ? '...' : ''}</div>
+                    ${obs.estado ? `<span class="timeline-badge ${badgeClass}">${obs.estado}</span>` : ''}
+                    ${obs.step ? `<span class="timeline-badge step">${obs.step}</span>` : ''}
+                `;
+
+                container.appendChild(div);
+            });
+        }
+
+        function renderTable(filter) {
+            const tbody = document.getElementById('prospectsTable');
+            tbody.innerHTML = '';
+
+            let contacts = [];
+            if (filter === 'ALL') {
+                Object.values(dashboardData.pipeline).forEach(arr => {
+                    contacts = contacts.concat(arr);
+                });
+            } else {
+                contacts = dashboardData.pipeline[filter] || [];
+            }
+
+            contacts.slice(0, 50).forEach(contact => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>
+                        <div class="table-name">${contact.name}</div>
+                        <div class="table-email">${contact.email}</div>
+                    </td>
+                    <td>${contact.company || '-'}</td>
+                    <td>${contact.current_step || '-'}</td>
+                    <td><span class="status-badge ${(contact.apollo_status || '').toLowerCase()}">${contact.apollo_status || 'Sin estado'}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterTable(category) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTable(category);
+        }
+
+        // Inicializar
+        window.addEventListener('DOMContentLoaded', loadData);
+
+        // Auto-refresh cada 5 minutos
+        setInterval(loadData, 5 * 60 * 1000);
+    </script>
+</body>
+
+</html>

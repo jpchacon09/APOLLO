@@ -153,9 +153,12 @@ def generate_full_data():
         elif 'NO_INTERESADO' in estado: category = 'RECHAZADOS'
         elif c.get('campaña'): category = 'EN_SECUENCIA'
         
+        # Usar apollo_name si Contacto está vacío
+        contact_name = c.get('Contacto') or c.get('apollo_name') or 'Sin Nombre'
+        
         pipeline[category].append({
-            'name': c.get('Contacto') or 'Sin Nombre',
-            'company': c.get('Empresa'),
+            'name': contact_name,
+            'company': c.get('Empresa') or c.get('apollo_org') or '-',
             'email': c.get('EMAIL_LIMPIO'),
             'apollo_status': c.get('estado_apollo') or c.get('apollo_status') or c.get('ESTADO'),
             'current_campaign': c.get('campaña') or '',

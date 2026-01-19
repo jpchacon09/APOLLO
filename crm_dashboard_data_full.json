@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-16T20:44:18.366530",
+  "timestamp": "2026-01-18T20:53:16.039943",
   "kpis_v2": {
     "email": {
       "sent": 397,
@@ -315,7 +315,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Jimmy Garcia Arenas",
         "company": "Compañia Dsierra S.A.S.",
         "email": "jarenas@dsierra.com",
         "apollo_status": "scheduled",
@@ -323,7 +323,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Freddy Martinez Mendez",
         "company": "CARVAL",
         "email": "freddy.martinez@carval.com.co",
         "apollo_status": "scheduled",
@@ -331,7 +331,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Sara Triana",
         "company": "Laboratorios Legrand S.A",
         "email": "striana@laboratorioslegrand.com",
         "apollo_status": "scheduled",
@@ -339,7 +339,7 @@
         "current_step": "LINKEDIN (DIA 4)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Diana Paola",
         "company": "Fábrica de Licores y Alcoholes de Antioquia -EICE-",
         "email": "diana.diaz@fla.com.co",
         "apollo_status": "scheduled",
@@ -347,7 +347,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Liliana Chamorro",
         "company": "Prosalon Distribuciones",
         "email": "liliana.chamorro@prosalon.com.co",
         "apollo_status": "scheduled",
@@ -355,7 +355,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Ricardo Aguirre",
         "company": "Pintuco",
         "email": "ricardo.aguirre@pintuco.com",
         "apollo_status": "scheduled",
@@ -363,7 +363,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Julio Cesar Guerrero",
         "company": "Alianza Team®",
         "email": "jguerrero@alianzateam.com",
         "apollo_status": "scheduled",
@@ -387,7 +387,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Laurindo",
         "company": "Alimentos Polar",
         "email": "laurindo.fernandez@empresas-polar.com",
         "apollo_status": "scheduled",
@@ -395,7 +395,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Jonathan Cuestas",
         "company": "Levapan",
         "email": "jonathan.cuestas@levapan.com",
         "apollo_status": "scheduled",
@@ -403,7 +403,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Juan Felipe Duenas",
         "company": "Novacolor S.A.S",
         "email": "felipe@novacolor.com.co",
         "apollo_status": "scheduled",
@@ -411,7 +411,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Manuela Pinilla Villegas",
         "company": "Gelco International",
         "email": "manuela.pinilla@gelcointernational.com",
         "apollo_status": "scheduled",
@@ -419,7 +419,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Andres Castro Sanchez",
         "company": "Productos Ramo S.A.",
         "email": "andres.sanchez@ramo.com.co",
         "apollo_status": "scheduled",
@@ -427,7 +427,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Enrique Arrazola",
         "company": "Sempertex SAS",
         "email": "enriquea@sempertex.com",
         "apollo_status": "scheduled",
@@ -435,7 +435,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Wenceslao Giraldo",
         "company": "Abbott Laboratories - Lafrancol S.A.S",
         "email": "wenceslao.giraldo@abbott.com",
         "apollo_status": "scheduled",
@@ -443,7 +443,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Mauricio Ramirez Chaustre",
         "company": "Solla S.A.",
         "email": "mramirez@solla.com",
         "apollo_status": "scheduled",
@@ -451,7 +451,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Luisa Fernanda Ortiz",
         "company": "Levapan",
         "email": "luisa.gomez@levapan.com",
         "apollo_status": "scheduled",
@@ -459,7 +459,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Claudia Lascano",
         "company": "Italcol Cuenta Oficial",
         "email": "claudialascano@italcol.com",
         "apollo_status": "scheduled",
@@ -475,7 +475,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Carola Mora",
         "company": "Productos Ramo S.A.",
         "email": "carola.mora@ramo.com.co",
         "apollo_status": "scheduled",
@@ -483,7 +483,7 @@
         "current_step": "SIN GESTION"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Gianella Romero Castro",
         "company": "Belcorp",
         "email": "gianellaromero@belcorp.biz",
         "apollo_status": "scheduled",
@@ -499,7 +499,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Santiago Garcia",
         "company": "Comercializadora Internacional Eslop Sas",
         "email": "contabilidad@eslop.co",
         "apollo_status": "scheduled",
@@ -507,7 +507,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "David Lascano",
         "company": "C.I. Global Multi Commodities S.A.S",
         "email": "gerencia@glomco.com.co",
         "apollo_status": "scheduled",
@@ -523,7 +523,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Landgreen S. A. S",
         "company": "Landgreen S.A.S.",
         "email": "saslandgreen@gmail.com",
         "apollo_status": "scheduled",
@@ -531,7 +531,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Jorge",
         "company": "Ci Jsw Corporation S.A.S",
         "email": "cumplimiento@jswcorporation.sas",
         "apollo_status": "scheduled",
@@ -539,7 +539,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "CI Real",
         "company": "C.I. Gestion El Real S.A.S.",
         "email": "gerencia@gestionelreal.com",
         "apollo_status": "scheduled",
@@ -1142,7 +1142,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Lucy Silva Silva",
         "company": "CampoReal",
         "email": "lucy.silva@camporeal.co",
         "apollo_status": "scheduled",
@@ -1150,7 +1150,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Angelica Torres",
         "company": "Laboratorios Smart S.A.S",
         "email": "atorres@laboratoriossmart.com",
         "apollo_status": "scheduled",
@@ -1158,7 +1158,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Carolina Urrea",
         "company": "Talsa",
         "email": "currea@citalsa.com",
         "apollo_status": "scheduled",
@@ -1166,7 +1166,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Pedro",
         "company": "Productos Vicky S.A.S",
         "email": "pedro.jerez@productoslavictoria.co",
         "apollo_status": "scheduled",
@@ -1174,7 +1174,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Esteban Arteaga",
         "company": "Medivelius Farmacéutica",
         "email": "esteban.arteaga@medivelius.com",
         "apollo_status": "scheduled",
@@ -1182,7 +1182,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Martin Ladino Clavijo",
         "company": "Megalabs Colombia",
         "email": "mladino@megalabs.com.co",
         "apollo_status": "scheduled",
@@ -1190,7 +1190,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Oscar Uribe",
         "company": "Dispapeles",
         "email": "oscar.uribe@dispapeles.com",
         "apollo_status": "scheduled",
@@ -1198,7 +1198,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Cesar Herrera",
         "company": "JGB S.A.",
         "email": "caherrera@jgb.com.co",
         "apollo_status": "scheduled",
@@ -1206,7 +1206,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Camilo Jaramillo Restrepo",
         "company": "Nutrium S.A.S.",
         "email": "camilo.jaramillo@nutrium.co",
         "apollo_status": "scheduled",
@@ -1222,7 +1222,7 @@
         "current_step": "LLAMADA 1 (DIA 3)"
       },
       {
-        "name": "Sin Nombre",
+        "name": "Industrias Dofi Sas",
         "company": "Industrias Dofi Sas",
         "email": "contabilidad2@moduofi.com",
         "apollo_status": "scheduled",
@@ -1464,7 +1464,7 @@
     ],
     "AGENDADOS": [
       {
-        "name": "Sin Nombre",
+        "name": "Ingrid Aristizabal Grisales",
         "company": "Surticosméticos",
         "email": "ingridaristizabal@surticosmeticos.com",
         "apollo_status": "scheduled",

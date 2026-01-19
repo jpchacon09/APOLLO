@@ -1,0 +1,38 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de log
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Node modules (si los hubiera)
+node_modules/
+
+# Archivos de datos sensibles (excepto los necesarios)
+*.env
+.env.local
+
+# Archivos de backup
+*.csv.bak
+*.json.bak

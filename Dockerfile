@@ -1,29 +1,38 @@
-# Use Python 3.11 slim image
+# Usar imagen oficial de Python
 FROM python:3.11-slim
 
-# Set working directory
+# Establecer directorio de trabajo
 WORKDIR /app
 
-# Copy requirements first for better caching
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar requirements
 COPY requirements.txt .
 
-# Install dependencies
+# Instalar dependencias de Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application files
-COPY crm_backend.py .
-COPY crm_pro.html .
+# Copiar archivos de la aplicación
+COPY api_server.py .
 COPY crm_engine.py .
+COPY apollo_enrichment_v2.py .
+COPY crm_dashboard_pro.html .
 COPY TablaBase.csv .
-COPY crm_dashboard_data_full.json .
-COPY apollo_sync_v3.py .
 COPY steps_apollo_resultado.csv .
+COPY informacion.txt .
 
-# Expose port
+# Generar datos iniciales
+RUN python crm_engine.py
+
+# Crear directorio para datos
+RUN mkdir -p /app/data
+
+# Exponer puerto (Cloud Run usa PORT env variable)
+ENV PORT=8080
 EXPOSE 8080
 
-# Set environment variable
-ENV PORT=8080
-
-# Run with gunicorn for production
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "2", "--timeout", "120", "crm_backend:app"]
+# Comando de inicio
+CMD uvicorn api_server:app --host 0.0.0.0 --port ${PORT}
