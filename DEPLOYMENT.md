@@ -149,7 +149,7 @@ export ENVIRONMENT="production"
 Modificar `api_server.py` para leer desde env:
 ```python
 import os
-APOLLO_API_KEY = os.getenv('APOLLO_API_KEY', '_KzNd14cLtj4Mpjj7RsJJw')
+APOLLO_API_KEY = os.getenv('APOLLO_API_KEY', '*********')
 ```
 
 ---
